@@ -50,6 +50,8 @@ function take_a_hike_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'take-a-hike' ),
+			"footer" => esc_html__ ("Footer Menu Location", "take-a-hike"),
+			"social" => esc_html__ ("Social Menu Location", "take-a-hike"),
 		)
 	);
 
