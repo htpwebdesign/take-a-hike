@@ -102,7 +102,6 @@ get_header();
 					endif;
 				?>
 					</div>
-				</div>
 				<?php
 				?>
 			</section>
