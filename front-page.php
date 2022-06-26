@@ -22,14 +22,152 @@ get_header();
 			the_post();
 			?>
 			<h1><?php the_title(); ?></h1>
+			
+		
+			<section class="hero-section">
+				
+				<div class="activities">
+					<div class="hiking">
+					<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Hiking</h2>
+					<?php
+						$image = get_field('hiking_image');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+					?>
+					</div>
+				
+					<div class="camping">
+					<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Camping</h2>
+						<?php
+						$image = get_field('camping_image');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+					?>
+					</div>
+
+					<div class="climbing">
+					<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Climbing</h2>
+					<?php
+						$image = get_field('climbing_image');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+					?>
+					</div>
+
+					<div class="watersports">
+					<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Watersports</h2>
+					<?php
+						$image = get_field('watersports_image');
+						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+				?>
+					</div>
+				</div>
+
+				<div class="featured-products">
+				<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Featured Products</h2>
+					<?php
+						$image = get_field('featured_products_image');
+						$size = 'large'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+				?>
+					</div>
+				</div>
+				<?php
+				?>
+			</section>
+
+			<section class="mid-section">
+				<div class="sale">
+				<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Sale</h2>
+					<?php
+						$image = get_field('sale_image');
+						$size = 'large'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+				?>
+				</div>
+				<div class="bundles">
+				<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2>Bundles</h2>
+					<?php
+						$image = get_field('bundles_image');
+						$size = 'large'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+				?>
+				</div>
+			</section>
+
+			<section class="end-section">
+				<div class="current-workshop">
+				<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2><?php the_field('workshop_subheading'); ?></h2>
+						<h2><?php the_field('current_workshop_title'); ?></h2>
+					<?php
+						$image = get_field('current_workshop_image');
+						$size = 'full'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+							echo wp_get_attachment_image( $image, $size );
+						endif;
+					endif;
+				?>
+				</div>
+			</section>
+
+			<section class="social-section">
+				<div class="instagram">
+				<?php
+					if (function_exists ( 'get_field' )) :
+					?>
+						<h2><?php the_field( 'instagram_subheading' ); ?></h2>
+					<?php
+					endif;
+				?>
+				</div>
+			</section>
 			<?php
-			// get_template_part( 'template-parts/content', 'page' );
-
-			// // If comments are open or we have at least one comment, load up the comment template.
-			// if ( comments_open() || get_comments_number() ) :
-			// 	comments_template();
-			// endif;
-
 		endwhile; // End of the loop.
 		?>
 
