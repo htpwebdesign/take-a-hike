@@ -51,6 +51,11 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+		<div class="site-search">
+			<?php get_search_form() ?>
+			<img class="search-toggle" src="<?php echo get_stylesheet_directory_uri(); ?>/media/search-icon.svg">
+		</div>
+
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'take-a-hike' ); ?></button>
 			<?php

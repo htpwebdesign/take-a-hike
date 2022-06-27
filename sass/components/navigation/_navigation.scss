@@ -107,3 +107,23 @@
 		flex: 1 0 50%;
 	}
 }
+
+// Search functionality
+
+.site-search.expanded {
+	.search-form {
+		display: initial;
+	}
+	.search-toggle {
+		display: none;
+	}
+}
+.site-search {
+	.search-form, .search-submit {
+		display: none;
+	}
+	.search-toggle {
+		cursor: pointer;
+	}
+}
+

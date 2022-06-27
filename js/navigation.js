@@ -96,4 +96,22 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+
+	// Search Functionality
+
+	const siteSearch = document.querySelector('.site-search');
+	const searchButton = siteSearch.querySelector('.search-toggle');
+	const searchInput = siteSearch.querySelector('.search-field');
+
+	if (searchButton) {
+		searchButton.addEventListener('click', ()=>{
+			siteSearch.classList.add('expanded')
+			
+			searchInput.focus()
+			searchInput.addEventListener('focusout', () => {
+				siteSearch.classList.remove('expanded')
+			})
+			
+		})
+	}
 }() );
