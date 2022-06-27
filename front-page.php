@@ -161,6 +161,7 @@ get_header();
 					if (function_exists ( 'get_field' )) :
 					?>
 						<h2><?php the_field( 'instagram_subheading' ); ?></h2>
+						<?php echo do_shortcode('[instagram-feed feed=1]'); ?>
 					<?php
 					endif;
 				?>
