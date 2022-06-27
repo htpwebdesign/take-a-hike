@@ -40,6 +40,9 @@ get_header();
 				if ( get_field( 'about_us_image_3' ) ) {
 					echo wp_get_attachment_image( get_field( 'about_us_image_3' ), 'medium', '', array('class' => 'custom-class' ));
 				}
+				if ( get_field( 'about_us_image_4' ) ) {
+					echo wp_get_attachment_image( get_field( 'about_us_image_4' ), 'medium', '', array('class' => 'custom-class' ));
+				}
 			}
 
 			// get_template_part( 'template-parts/content', 'page' );
