@@ -145,6 +145,16 @@ function take_a_hike_scripts() {
 
 	wp_enqueue_script( 'take-a-hike-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
+	
+	//Enqueue the Google Maps script from the Google Server
+	wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAjO7pvmkKQkMrR62RfGptPCAQCu9YIo6U', 
+	array(), 
+	_S_VERSION, 
+	true );
+	
+	// Enqueue ACF helper code to display the Google Map
+	wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/google-map-script.js', array( 'google-map', 'jquery' ), _S_VERSION, true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -184,3 +194,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Load Google Map API
+ */
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyAjO7pvmkKQkMrR62RfGptPCAQCu9YIo6U';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
