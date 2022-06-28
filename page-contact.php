@@ -57,7 +57,9 @@ get_header();
 					endif;
 				endif;
 				?>
-				<span></span>
+				<nav id="social-navigation" class="social-navigation">
+				<?php wp_nav_menu(array('theme_location' => 'social')); ?>
+				</nav>
 			</section>
 
 			<section class="contact-hours">
