@@ -187,3 +187,13 @@ function my_acf_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
+
+	function take_a_hike_output_filters() {
+		if( is_shop() ) {
+			// echo 'hello';
+			echo do_shortcode('[wpf-filters id=1]');
+		} else {
+			echo do_shortcode('[wpf-filters id=2]');
+		}
+	}
+	add_action( 'woocommerce_archive_description', 'take_a_hike_output_filters', 9);
