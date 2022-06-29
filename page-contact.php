@@ -108,7 +108,7 @@ get_header();
 					?>
 				</section>
 			
-					<?php
+				<?php
 			endif;
 
 		endwhile; // End of the loop.	
