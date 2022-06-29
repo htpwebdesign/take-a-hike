@@ -188,6 +188,8 @@ add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
 
+
+
 	function take_a_hike_output_filters() {
 		if( is_shop() ) {
 			// echo 'hello';

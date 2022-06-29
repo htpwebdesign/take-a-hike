@@ -48,7 +48,7 @@ get_header();
 
 			<article class="activities">
 			<?php
-				if (have_rows ( 'hero_section', 45 ) ) :
+				if ( have_rows ( 'hero_section', 45 ) ) :
 					while( have_rows( 'hero_section', 45 ) ): 
 						the_row(); 
 						$link = get_sub_field( 'link' );
@@ -69,12 +69,12 @@ get_header();
 									echo wp_get_attachment_image( $image, $size );	
 								endif;
     						endif; ?>
-   							</a>	
-							<?php  
-							endif;						
+   						</a>	
+						<?php  
+						endif;						
 							
-						endwhile;
-					endif;
+					endwhile;
+				endif;
 				
 					?>
 			</article>
