@@ -31,18 +31,17 @@ get_header();
 					the_field( 'about_us_info');
 					echo '</p>';
 				}
-				if ( get_field( 'about_us_image_1' ) ) {
-					echo wp_get_attachment_image( get_field( 'about_us_image_1' ), 'medium', '', array('class' => 'custom-class' ));
-				}
-				if ( get_field( 'about_us_image_2' ) ) {
-					echo wp_get_attachment_image( get_field( 'about_us_image_2' ), 'medium', '', array('class' => 'custom-class' ));
-				}
-				if ( get_field( 'about_us_image_3' ) ) {
-					echo wp_get_attachment_image( get_field( 'about_us_image_3' ), 'medium', '', array('class' => 'custom-class' ));
-				}
-				if ( get_field( 'about_us_image_4' ) ) {
-					echo wp_get_attachment_image( get_field( 'about_us_image_4' ), 'medium', '', array('class' => 'custom-class' ));
-				}
+
+				// Output gallery
+				$images = get_field('gallery');
+				$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+				if( $images ): ?>
+					<section class="gallery-about">
+						<?php foreach( $images as $image_id ): ?>
+						<?php echo wp_get_attachment_image( $image_id, $size ); ?>
+						<?php endforeach; ?>
+					</section>
+				<?php endif;
 			}
 
 			?>
