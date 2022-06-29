@@ -33,7 +33,7 @@ do_action( 'woocommerce_before_main_content' );
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
-	<?php echo do_shortcode('[wpf-filters id=1]') ?>
+	<?php echo do_shortcode('[wpf-filters id=2]') ?>
 	<?php
 	/**
 	 * Hook: woocommerce_archive_description.
