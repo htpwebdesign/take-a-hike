@@ -22,101 +22,96 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/content', 'page' );
-			?>
+			
 
-			<section class="contact-address">
-				<?php
-				//Store Address
-				if ( function_exists ( 'get_field' ) ):
+			if ( function_exists ( 'get_field' ) ):
+			?>
+				<section class="contact-address">
+					<?php
+					//Store Address
 					if ( get_field ( 'contact_address' ) ):
 						?>
 						<p><?php the_field( 'contact_address' ) ?></p>
 						<?php
 					endif;
-				endif;
 
-				//Store Number
-				if ( function_exists ( 'get_field' ) ):
+					//Store Number
 					if ( get_field ( 'contact_number' ) ):
 						?>
 						<p><?php the_field( 'contact_number' ) ?></p>
 						<?php
 					endif;
-				endif;
-				?>
-			</section>
+					?>
+				</section>
 
-			<section class="contact-social">
-				<?php
-				//Social Media Heading
-				if ( function_exists ( 'get_field' ) ):
+				<section class="contact-social">
+					<?php
+					//Social Media Heading
 					if ( get_field ( 'social_media_subheading' ) ):
 						?>
 						<h2><?php the_field( 'social_media_subheading' ) ?></h2>
 						<?php
 					endif;
-				endif;
-				?>
-				<nav id="social-navigation" class="social-navigation">
-				<?php wp_nav_menu(array('theme_location' => 'social')); ?>
-				</nav>
-			</section>
+					?>
+					<nav id="social-navigation" class="social-navigation">
+					<?php wp_nav_menu(array('theme_location' => 'social')); ?>
+					</nav>
+				</section>
 
-			<section class="contact-hours">
-				<?php
-				//Store Hours Heading
-				if ( function_exists ( 'get_field' ) ):
+				<section class="contact-hours">
+					<?php
+					//Store Hours Heading
 					if ( get_field ( 'store_hours_subheading' ) ):
 						?>
 						<h2><?php the_field( 'store_hours_subheading' ) ?></h2>
 						<?php
 					endif;
-				endif;
-				
-				// Store Hours Table
-				if( have_rows( 'contact_store_hours' ) ): ?>
-					<table cellspacing = "0">
-					<thead>
-						<tr>
-							<th>Day</th>
-							<th>Hours</th>
-						</tr>
-					</thead>
-					<tbody>
-					<?php
-					while( have_rows('contact_store_hours') ):
-						the_row();
-						?>
-						<tr>
-							<td><?php the_sub_field('day'); ?></td>
-							<td><?php the_sub_field('working_hours'); ?></td>
 
-						</tr>
-						<?php
-					endwhile;
-					?>
-					</tbody>
-					<?php
+						// Store Hours Table
+					if( have_rows( 'contact_store_hours' ) ): ?>
+						<table cellspacing = "0">
+							<thead>
+								<tr>
+									<th>Day</th>
+									<th>Hours</th>
+								</tr>
+							</thead>
+							<tbody>
+							<?php
+							while( have_rows('contact_store_hours') ):
+								the_row();
+								?>
+								<tr>
+									<td><?php the_sub_field('day'); ?></td>
+									<td><?php the_sub_field('working_hours'); ?></td>
 			
-				endif; ?>
-					</table>
+								</tr>
+								<?php
+							endwhile;
+							?>
+							</tbody>
+						</table>
+						<?php						
+					endif; 
+					?>
+				</section>
+			
+				<section class="contact-map">
+					<?php 
+					$location = get_field('google_map');
+					if( $location ): ?>
+						<div class="acf-map" data-zoom="16">
+							<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
+						</div>
+					<?php 
+					endif; 
+					?>
+				</section>
+			
 					<?php
-			?>
-			</section>
+			endif;
 
-			<section class="contact-map">
-				<?php 
-				$location = get_field('google_map');
-				if( $location ): ?>
-					<div class="acf-map" data-zoom="16">
-						<div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
-					</div>
-				<?php endif; ?>
-			</section>
-
-			<?php
-
-		endwhile; // End of the loop.
+		endwhile; // End of the loop.	
 		?>
 
 	</main><!-- #main -->
