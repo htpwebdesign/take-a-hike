@@ -234,3 +234,15 @@ function take_a_hike_custom_taxonomy()  {
 	register_taxonomy( 'item', 'product', $args );
 	}
 	add_action( 'init', 'take_a_hike_custom_taxonomy');
+
+
+
+	function take_a_hike_output_filters() {
+		if( is_shop() ) {
+			// echo 'hello';
+			echo do_shortcode('[wpf-filters id=1]');
+		} else {
+			echo do_shortcode('[wpf-filters id=2]');
+		}
+	}
+	add_action( 'woocommerce_archive_description', 'take_a_hike_output_filters', 9);
