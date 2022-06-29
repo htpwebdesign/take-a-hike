@@ -23,17 +23,11 @@
 		</div><!-- .footer-menus -->
 
 		<div class="site-info">
-			<!-- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'take-a-hike' ) ); ?>">
+		
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'take-a-hike' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'take-a-hike' ), 'take-a-hike', '<a href="https://takeahikeoutfitters.bcitwebdeveloper.ca/">FWD30</a>' );
-				?> -->
+				// /* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Website built %1$s by %2$s.', 'take-a-hike' ), '', '<a href="https://natalieratayczak.com/">Natalie Ratayczak, </a><a href="https://bcit.jessicalaporte.com/">Jessica Laporte, </a><a href="https://marvuk.com/">Marko Vukmirovic, </a><a href="https://adamh.ca/">Adam Hauck</a>' );
+				?> 
 				<p>&copy 2022 Take a Hike Outfitters</p>
 				<?php the_privacy_policy_link();?>
 		</div><!-- .site-info -->

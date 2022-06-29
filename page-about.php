@@ -47,136 +47,42 @@ get_header();
 
 			?>
 
-			<div class="activities">
-				<div class="hiking">
-				<?php
-				if (function_exists ( 'get_field' )) :				
-
-					if ( get_field( 'hiking_link' ) ) :
-						$link = get_field('hiking_link');
+			<article class="activities">
+			<?php
+				if (have_rows ( 'hero_section', 45 ) ) :
+					while( have_rows( 'hero_section', 45 ) ): 
+						the_row(); 
+						$link = get_sub_field( 'link' );
+	
 						if( $link ) : 
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="activity-link hiking" href="<?php echo esc_url( $link_url ); ?>"
-							target="<?php echo esc_attr( $link_target ); ?>
-							"><?php echo esc_html( $link_title ); ?>
-							<h2><?php the_field('activity_title_1'); ?></h2><?php $image = get_field('hiking_image');
-							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-							if( $image ) :
-								echo wp_get_attachment_image( $image, $size );					
-							endif; ?>
-							</a>	
-						<?php  
-						endif; 
-						?>
-						<?php     
-					endif;
-
-				endif;
-
-				?>
-				</div>
-			
-				<div class="camping">
-				<?php
-				if (function_exists ( 'get_field' )) :					
-					
-					if ( get_field( 'camping_link' ) ) :
-						$link = get_field('camping_link');
-						if( $link ) : 
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="activity-link camping" href="<?php echo esc_url( $link_url ); ?>"
-							target="<?php echo esc_attr( $link_target ); ?>
-							"><?php echo esc_html( $link_title ); ?>
-							<h2><?php the_field('activity_title_2'); ?></h2><?php $image = get_field('camping_image');
-							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-							if( $image ) :
-								echo wp_get_attachment_image( $image, $size );					
-							endif; ?>
-							</a>	
-						<?php  
-						endif; 
-						?>
-						<?php     
-					endif;
-
-				endif;
-				?>
-				</div>
-
-				<div class="climbing">
-				<?php
-				if (function_exists ( 'get_field' )) :					
-
-					if ( get_field( 'climbing_link' ) ) :
-					$link = get_field('climbing_link');
-						if( $link ) : 
-						$link_url = $link['url'];
-						$link_title = $link['title'];
-						$link_target = $link['target'] ? $link['target'] : '_self';
-						?>
-						<a class="activity-link climbing" href="<?php echo esc_url( $link_url ); ?>"
-						target="<?php echo esc_attr( $link_target ); ?>
-						"><?php echo esc_html( $link_title ); ?>
-						<h2><?php the_field('activity_title_3'); ?></h2><?php $image = get_field('climbing_image');
-						$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-							if( $image ) :
-								echo wp_get_attachment_image( $image, $size );					
-							endif; ?>
-						</a>	
-						<?php  
-						endif; 
-						?>
-						<?php     
-					endif;
-
-				endif;
-				?>
-				</div>
-
-				<div class="watersports">
-				<?php
-				if (function_exists ( 'get_field' )) :
-				
-					if ( get_field( 'watersports_link' ) ) :
-						$link = get_field('watersports_link');
-							if( $link ) : 
-							$link_url = $link['url'];
-							$link_title = $link['title'];
-							$link_target = $link['target'] ? $link['target'] : '_self';
-							?>
-							<a class="activity-link watersports" href="<?php echo esc_url( $link_url ); ?>"
-							target="<?php echo esc_attr( $link_target ); ?>
-							"><?php echo esc_html( $link_title ); ?>
-							<h2><?php the_field('activity_title_4'); ?></h2><?php $image = get_field('watersports_image');
-							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-								if( $image ) :
-									echo wp_get_attachment_image( $image, $size );					
-								endif; ?>
-							</a>	
+    					$link_url = $link['url'];
+   						$link_title = $link['title'];
+    					$link_target = $link['target'] ? $link['target'] : '_self';
+    					?>
+    					<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
+    					target="<?php echo esc_attr( $link_target ); ?>
+    					"><?php echo esc_html( $link_title ); 
+    						if( get_row_index() <= 4 ) :
+								?>
+								<h2><?php the_sub_field( 'title' ); ?></h2><?php $image = get_sub_field( 'image' );
+    							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+								if ( $image ) :
+									echo wp_get_attachment_image( $image, $size );	
+								endif;
+    						endif; ?>
+   							</a>	
 							<?php  
-							endif; 
+							endif;						
+							
+						endwhile;
 					endif;
-
-				endif;
-				?>
-				</div>
-			</div>
+				
+					?>
+			</article>
 
 
 			<?php
 
-			// get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			// if ( comments_open() || get_comments_number() ) :
-			// 	comments_template();
-			// endif;
 
 		endwhile; // End of the loop.
 		?>
@@ -184,5 +90,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

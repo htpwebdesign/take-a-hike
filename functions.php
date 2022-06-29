@@ -112,29 +112,11 @@ add_action( 'after_setup_theme', 'take_a_hike_setup' );
  * @global int $content_width
  */
 function take_a_hike_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'take_a_hike_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'take_a_hike_content_width', 1920 );
 }
 add_action( 'after_setup_theme', 'take_a_hike_content_width', 0 );
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function take_a_hike_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'take-a-hike' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'take-a-hike' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'take_a_hike_widgets_init' );
+
 
 /**
  * Enqueue scripts and styles.
@@ -205,32 +187,3 @@ function my_acf_google_map_api( $api ){
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 
-// Register Custom Taxonomy
-function take_a_hike_custom_taxonomy()  {
-	$labels = array(
-		'name'                       => 'Level',
-		'singular_name'              => 'Level',
-		'menu_name'                  => 'Levels',
-		'all_items'                  => 'All Levels',
-		'parent_item'                => 'Parent Level',
-		'parent_item_colon'          => 'Parent Level:',
-		'new_item_name'              => 'New Level Name',
-		'add_new_item'               => 'Add New Level',
-		'edit_item'                  => 'Edit Level',
-		'update_item'                => 'Update Level',
-		'separate_items_with_commas' => 'Separate Levels with commas',
-		'search_items'               => 'Search Levels',
-		'add_or_remove_items'        => 'Add or remove Levels',
-	);
-	$args = array(
-		'labels'                     => $labels,
-		'hierarchical'               => true,
-		'public'                     => true,
-		'show_ui'                    => true,
-		'show_admin_column'          => true,
-		'show_in_nav_menus'          => true,
-		'show_tagcloud'              => true,
-	);
-	register_taxonomy( 'item', 'product', $args );
-	}
-	add_action( 'init', 'take_a_hike_custom_taxonomy');
