@@ -203,3 +203,34 @@ function my_acf_google_map_api( $api ){
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+
+// Register Custom Taxonomy
+function take_a_hike_custom_taxonomy()  {
+	$labels = array(
+		'name'                       => 'Level',
+		'singular_name'              => 'Level',
+		'menu_name'                  => 'Levels',
+		'all_items'                  => 'All Levels',
+		'parent_item'                => 'Parent Level',
+		'parent_item_colon'          => 'Parent Level:',
+		'new_item_name'              => 'New Level Name',
+		'add_new_item'               => 'Add New Level',
+		'edit_item'                  => 'Edit Level',
+		'update_item'                => 'Update Level',
+		'separate_items_with_commas' => 'Separate Levels with commas',
+		'search_items'               => 'Search Levels',
+		'add_or_remove_items'        => 'Add or remove Levels',
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+	);
+	register_taxonomy( 'item', 'product', $args );
+	}
+	add_action( 'init', 'take_a_hike_custom_taxonomy');
