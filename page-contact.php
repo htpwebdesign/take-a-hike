@@ -22,7 +22,7 @@ get_header();
 			the_post();
 			?>
 			<h1><?php the_title() ?></h1>
-			<section class="contact-form"><?php echo do_shortcode('[wpforms id="512" title="false"]') ?></section>
+			<section class="contact-form"><?php echo do_shortcode('[wpforms id="516"]') ?></section>
 			<?php
 			if ( function_exists ( 'get_field' ) ):
 			?>
