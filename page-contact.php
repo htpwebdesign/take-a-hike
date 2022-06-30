@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying the Contact Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -20,10 +20,10 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-			
-
+			?>
+			<h1><?php the_title() ?></h1>
+			<section class="contact-form"><?php echo do_shortcode('[wpforms id="512" title="false"]') ?></section>
+			<?php
 			if ( function_exists ( 'get_field' ) ):
 			?>
 				<section class="contact-address">
