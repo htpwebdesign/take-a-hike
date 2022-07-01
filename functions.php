@@ -122,6 +122,15 @@ add_action( 'after_setup_theme', 'take_a_hike_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function take_a_hike_scripts() {
+
+			// Load Google Fonts
+			wp_enqueue_style('take-a-hike-google-fonts', // Unique handle
+			'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Teko:wght@400;500;600;700&display=swap', // Path to css file
+			array(), // dependencies
+			null, // version (have to set null with Google fonts. Only time we enter null here instead of version number)
+			'all', // media
+		);
+
 	wp_enqueue_style( 'take-a-hike-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'take-a-hike-style', 'rtl', 'replace' );
 
