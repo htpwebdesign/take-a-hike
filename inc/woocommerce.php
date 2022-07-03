@@ -225,3 +225,15 @@ if ( ! function_exists( 'take_a_hike_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/* Output Filters*/
+
+function take_a_hike_output_filters() {
+	if( is_shop() ) {
+		// echo 'hello';
+		echo do_shortcode('[wpf-filters id=1]');
+	} else {
+		echo do_shortcode('[wpf-filters id=2]');
+	}
+}
+add_action( 'woocommerce_archive_description', 'take_a_hike_output_filters', 9);
