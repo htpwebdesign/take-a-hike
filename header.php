@@ -50,21 +50,23 @@
 				<p class="site-description"><?php echo $take_a_hike_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+		
+		<div class="search-and-nav">
+			<div class="site-search">
+				<?php get_search_form() ?>
+				<img class="search-toggle" src="<?php echo get_stylesheet_directory_uri(); ?>/media/search-icon.svg">
+			</div>
 
-		<div class="site-search">
-			<?php get_search_form() ?>
-			<img class="search-toggle" src="<?php echo get_stylesheet_directory_uri(); ?>/media/search-icon.svg">
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img class="hamburger-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/media/hamburger-icon.png"></button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
 		</div>
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'take-a-hike' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

@@ -1,6 +1,5 @@
 .main-navigation {
 	display: block;
-	width: 100%;
 
 	ul {
 		display: none;
@@ -9,16 +8,10 @@
 		padding-left: 0;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+			display: block;
 
 			ul {
-				left: -999em;
-				top: 0;
+				display: block;
 			}
 
 			li {
@@ -26,7 +19,6 @@
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
-					left: auto;
 				}
 			}
 
@@ -45,7 +37,8 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			// left: auto;
+			// display: block;
 		}
 	}
 
@@ -69,9 +62,10 @@
 	}
 }
 
+
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation.toggled ul.menu {
 	display: block;
 }
 
@@ -119,11 +113,68 @@
 	}
 }
 .site-search {
+	display: flex;
+	align-items: center;
 	.search-form, .search-submit {
 		display: none;
 	}
 	.search-toggle {
 		cursor: pointer;
+	}
+}
+
+
+// Header & Navigation
+.site-header {
+	padding: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.search-and-nav {
+		display: flex;
+	}
+
+	.site-branding, .site-branding img {
+		height: 3rem;
+		width: 3rem;
+	}
+
+	.main-navigation {
+		.menu-header-container {
+			position: absolute;
+			z-index: 99999;
+			left: 0;
+			width: 100%;
+			background-color: $brand-color;
+			margin-top: 0.5rem;
+			
+			ul {
+				padding: 1rem;
+
+				li a {
+					color: $color__background-body;
+					line-height: $line-height-nav;
+				}
+			}
+
+			ul.sub-menu {
+				padding: 0;
+				padding-left: 2rem;
+			}
+		}
+
+		button {
+		background: none;
+		outline: none;
+		border: none;
+		}
+	
+		.hamburger-icon {
+			height: 2rem;
+			width: 2rem;
+			cursor: pointer;
+		}
 	}
 }
 
