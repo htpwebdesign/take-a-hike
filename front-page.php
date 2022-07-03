@@ -25,7 +25,7 @@ get_header();
 			
 		
 			<section class="hero-section">				
-				<article class="activities_featured">
+			
 					<?php
 					if (have_rows ( 'hero_section' ) ) :
 						while( have_rows( 'hero_section' ) ): 
@@ -56,11 +56,11 @@ get_header();
 						endwhile;
 					endif;
 					?>
-				</article>
+				
 			</section>
 
 			<section class="mid-section">
-				<article class="sale_bundles">
+			
 				<?php
 					if (have_rows ( 'middle_section' ) ) :
 						while( have_rows( 'middle_section' ) ): 
@@ -88,11 +88,11 @@ get_header();
 						endwhile;
 					endif;
 					?>
-				</article>		
+					
 			</section>
 
 			<section class="end-section">
-				<article class="current_workshop">
+				
 				<?php
 					if (have_rows ( 'end_section' ) ) :
 						while( have_rows( 'end_section' ) ): 
@@ -121,11 +121,11 @@ get_header();
 						endwhile;
 					endif;
 					?>
-				</article>
+				
 			</section>
 
 			<section class="social-section">
-				<article class="instagram">
+				
 				<?php
 					if (function_exists ( 'get_field' )) :
 					?>
@@ -134,7 +134,7 @@ get_header();
 					<?php
 					endif;
 				?>
-				</article>
+				
 			</section>
 			<?php
 		endwhile; // End of the loop.

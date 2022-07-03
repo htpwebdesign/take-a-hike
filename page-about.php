@@ -46,7 +46,7 @@ get_header();
 
 			?>
 
-			<article class="activities">
+			<section class="activities">
 			<?php
 				if ( have_rows ( 'hero_section', 45 ) ) :
 					while( have_rows( 'hero_section', 45 ) ): 
@@ -77,7 +77,7 @@ get_header();
 				endif;
 				
 					?>
-			</article>
+			</section>
 
 
 			<?php
