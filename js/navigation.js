@@ -40,6 +40,8 @@
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
 		}
+
+		button.classList.toggle('open');
 	} );
 
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
@@ -49,8 +51,20 @@
 		if ( ! isClickInside ) {
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
+			button.classList.remove('open');
 		}
 	} );
+
+	// While resizing window 
+
+	window.addEventListener('resize', function(){
+
+		if (window.innerWidth > 600) {
+			siteNavigation.classList.remove( 'toggled' );
+			button.setAttribute( 'aria-expanded', 'false' );
+			button.classList.remove('open');
+		}
+	});
 
 	// Get all the link elements within the menu.
 	const links = menu.getElementsByTagName( 'a' );
