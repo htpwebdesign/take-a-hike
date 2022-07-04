@@ -58,7 +58,11 @@
 			</div>
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img class="hamburger-icon" src="<?php echo get_stylesheet_directory_uri(); ?>/media/hamburger-icon.png"></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="hamburger-icon">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
 				<?php
 				wp_nav_menu(
 					array(
