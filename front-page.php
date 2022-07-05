@@ -1,4 +1,4 @@
-<?php
+dd<?php
 /**
  * The template for displaying all pages
  *
@@ -25,7 +25,7 @@ get_header();
 			
 		
 			<section class="hero-section">				
-			
+				<div class="hero-grid">
 					<?php
 					if (have_rows ( 'hero_section' ) ) :
 						while( have_rows( 'hero_section' ) ): 
@@ -37,30 +37,35 @@ get_header();
    							$link_title = $link['title'];
     						$link_target = $link['target'] ? $link['target'] : '_self';
     						?>
-    						<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-    						target="<?php echo esc_attr( $link_target ); ?>
-    						"><?php echo esc_html( $link_title ); ?>
-    							<h2><?php the_sub_field( 'title' ); ?></h2><?php $image = get_sub_field( 'image' );
-    							$size = 'medium'; // (thumbnail, medium, large, full or custom size)
-								$size2 = 'large';
-								$title = get_sub_field( 'title' );
-								if( $title == "Featured Products") :
-        							echo wp_get_attachment_image( $image, $size2 );					
-								else :
-									echo wp_get_attachment_image( $image, $size );	
-    							endif; ?>
-   							 </a>	
+							<div class="activity">
+    							<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
+    							target="<?php echo esc_attr( $link_target ); ?>
+    							"><?php echo esc_html( $link_title ); ?>
+									<div class="container">    							
+										<?php $image = get_sub_field( 'image' );
+    									$size = 'large'; // (thumbnail, medium, large, full or custom size)
+										$size2 = 'large';
+										$title = get_sub_field( 'title' );
+										if( $title == "Featured Products") :
+        									echo wp_get_attachment_image( $image, $size2 );					
+										else :
+											echo wp_get_attachment_image( $image, $size );	
+    									endif; ?>
+										<h2><?php the_sub_field( 'title' ); ?></h2>
+									</div>
+   								 </a>
+							</div>
 							<?php  
 							endif;						
 							
 						endwhile;
 					endif;
 					?>
-				
+				</div>
 			</section>
 
 			<section class="mid-section">
-			
+				<div class="mid-grid">
 				<?php
 					if (have_rows ( 'middle_section' ) ) :
 						while( have_rows( 'middle_section' ) ): 
@@ -72,26 +77,33 @@ get_header();
    							$link_title = $link['title'];
     						$link_target = $link['target'] ? $link['target'] : '_self';
     						?>
-    						<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-    						target="<?php echo esc_attr( $link_target ); ?>
-    						"><?php echo esc_html( $link_title ); ?>
-    							<h2><?php the_sub_field( 'title' ); ?></h2><?php $image = get_sub_field( 'image' );
-    							$size = 'large'; // (thumbnail, medium, large, full or custom size)
-								
-								if( $image ) :
-        							echo wp_get_attachment_image( $image, $size );					
-    							endif; ?>
-   							 </a>	
+							<div class="activity">
+							
+    							<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
+    							target="<?php echo esc_attr( $link_target ); ?>
+    							"><?php echo esc_html( $link_title ); ?>
+    							
+									<div class="container"> 
+										<?php $image = get_sub_field( 'image' );
+    									$size = 'large'; // (thumbnail, medium, large, full or custom size)
+										if( $image ) :
+        								echo wp_get_attachment_image( $image, $size );					
+    									endif; ?>
+										<h2><?php the_sub_field( 'title' ); ?></h2>
+									</div>
+   							 	</a>	
+							</div>
 							<?php  
 							endif;						
 							
 						endwhile;
 					endif;
 					?>
-					
+				</div>
 			</section>
 
 			<section class="end-section">
+				
 				
 				<?php
 					if (have_rows ( 'end_section' ) ) :
@@ -104,17 +116,23 @@ get_header();
    							$link_title = $link['title'];
     						$link_target = $link['target'] ? $link['target'] : '_self';
     						?>
+							
 							<h2><?php the_field( 'workshop_subheading' ); ?></h2>
-    						<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-    						target="<?php echo esc_attr( $link_target ); ?>
-    						"><?php echo esc_html( $link_title ); ?>
-    							<h2><?php the_sub_field( 'title' ); ?></h2><?php $image = get_sub_field( 'image' );
-    							$size = 'full'; // (thumbnail, medium, large, full or custom size)
+							
+    							<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
+    							target="<?php echo esc_attr( $link_target ); ?>
+    							"><?php echo esc_html( $link_title ); ?>
+									<div class="container"> 
+										<?php $image = get_sub_field( 'image' );
+    									$size = 'full'; // (thumbnail, medium, large, full or custom size)
 								
-								if( $image ) :
-        							echo wp_get_attachment_image( $image, $size );					
-    							endif; ?>
-   							 </a>	
+										if( $image ) :
+        									echo wp_get_attachment_image( $image, $size );					
+    									endif; ?>
+										<h2><?php the_sub_field( 'title' ); ?></h2>
+									</div>
+   							 	</a>	
+							
 							<?php  
 							endif;						
 							
