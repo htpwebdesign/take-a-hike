@@ -3,7 +3,8 @@
 
 .tribe-events {
 
-    .tribe-events-calendar-list__event-title-link {
+    .tribe-events-calendar-list__event-title-link,
+    .tribe-events-calendar-list__event-title-link:visited {
         color: $brand-color;
 
         &:hover {
@@ -130,7 +131,6 @@
 .tribe-events-c-nav__prev-label,
 .tribe-events-back a,
 .tribe-events-schedule h2,
-.tribe-common button,
 .single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list-item, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list-item,
 .tribe-events-event-meta,
 .tribe-events,
@@ -147,3 +147,8 @@
         }
     }
 }
+
+// .tribe-common button {
+//     font-family: $font__main;
+//     color: $color__background-body;
+// }
