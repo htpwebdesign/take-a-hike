@@ -1,0 +1,149 @@
+// Main page
+
+
+.tribe-events {
+
+    .tribe-events-calendar-list__event-title-link {
+        color: $brand-color;
+
+        &:hover {
+            color: $accent-color;
+        }
+    // .tribe-events-calendar-list__month-separator:after {
+    //     background-color: rgba($accent-color, 0.5);
+    // }
+    }
+
+    .datepicker {
+        .day.active {
+            background: $brand-color;
+        }
+    }
+}
+
+.tribe-events .tribe-events-calendar-list__event-title-link:hover {
+    border-bottom: 1px solid $accent-color;
+}
+
+.tribe-common--breakpoint-medium.tribe-events {
+    .tribe-events-c-events-bar--border {
+        border: .5px solid $brand-color;
+    }
+}
+
+.tribe-events .tribe-events-calendar-day__event-featured-image-link,
+.tribe-events .tribe-events-calendar-list__event-featured-image {
+    border-radius: 20px;
+}
+
+// Individual page
+
+.tribe-events-single-event-title,
+.tribe-events-event-meta a:focus,
+.tribe-events-event-meta a:hover {
+    color: $brand-color;
+}
+
+@media screen and (min-width: $breakpoint600) {
+    .tribe-events-event-image img {
+        max-width: 50%;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+}
+
+// buttons
+
+.tribe-common .tribe-common-c-btn-border,
+.tribe-common a.tribe-common-c-btn-border,
+.tribe-events .tribe-events-c-search__button {
+    background-color: $color__background-body;
+    border: 1px solid $brand-color;
+    color: $brand-color;
+    font-family: $font__main;
+
+    &:hover,
+    &:focus {
+        background-color: $brand-color;
+    }
+}
+
+.tribe-events {
+    .tribe-events-c-subscribe-dropdown {
+        .tribe-events-c-subscribe-dropdown__button:hover,
+        .tribe-events-c-subscribe-dropdown__button:focus-within,
+        .tribe-events-c-subscribe-dropdown__button:focus {
+            background-color: $brand-color;
+            color: $color__background-body;
+            font-family: $font__main;
+        }
+    }
+}
+
+// Arrow svg
+
+.tribe-common .tribe-common-c-btn-icon--caret-right .tribe-common-c-btn-icon__icon-svg path,
+.tribe-common .tribe-common-c-btn-icon--caret-left .tribe-common-c-btn-icon__icon-svg path,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__prev-icon-svg path,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-nav__next-icon-svg path {
+    fill: $brand-color;
+
+    &:hover {
+        fill: $accent-color;
+    }
+}
+
+// font
+
+.tribe-common .tribe-common-h3,
+.tribe-common .tribe-common-h5,
+.tribe-common .tribe-common-h6 {
+    font-family: $font__header;
+    font-size: 1.5em;
+}
+
+.tribe-events-single-event-title,
+.tribe-events-single-section-title {
+    font-family: $font__header;
+    font-size: 2.5em;
+}
+
+.tribe-events-meta-group .tribe-events-single-section-title {
+    font-size: 2em;
+    color: $color__text-main;
+}
+
+.tribe-common {
+    p,
+    .tribe-common-h7 {
+        font-family: $font__main;
+    }
+}
+
+
+.tribe-events .tribe-events-c-view-selector__list-item-text,
+.tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
+.tribe-common .tribe-common-form-control-text__input,
+.tribe-common .tribe-common-c-btn-border-small,
+.tribe-common a.tribe-common-c-btn-border-small,
+.tribe-events-c-nav__next-label,
+.tribe-events-c-nav__prev-label,
+.tribe-events-back a,
+.tribe-events-schedule h2,
+.tribe-common button,
+.single-tribe_events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list-item, .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list-item,
+.tribe-events-event-meta,
+.tribe-events,
+.tribe-events-single .tribe-events-sub-nav,
+.single-tribe_events .tribe-events-single .tribe-events-event-meta {
+    font-family: $font__main;
+    color: $color__text-main;
+
+    .datepicker {
+        .datepicker-switch,
+        .day,
+        .dow {
+            font-family: $font__main;
+        }
+    }
+}
