@@ -1,4 +1,4 @@
-dd<?php
+<?php
 /**
  * The template for displaying all pages
  *
@@ -25,7 +25,7 @@ get_header();
 			
 		
 			<section class="hero-section">				
-				<div class="hero-grid">
+				<section class="hero-grid">
 					<?php
 					if (have_rows ( 'hero_section' ) ) :
 						while( have_rows( 'hero_section' ) ): 
@@ -61,7 +61,7 @@ get_header();
 						endwhile;
 					endif;
 					?>
-				</div>
+				</section>
 			</section>
 
 			<section class="mid-section">

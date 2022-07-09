@@ -23,14 +23,15 @@
 		</div><!-- .footer-menus -->
 
 		<div class="site-info">
-		
-				<?php the_privacy_policy_link();?><br>
+						
 				<?php
 				// /* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Website built %1$s by %2$s.', 'take-a-hike' ), '', '<a href="https://natalieratayczak.com/">Natalie Ratayczak, </a><a href="https://bcit.jessicalaporte.com/">Jessica Laporte, </a><a href="https://marvuk.com/">Marko Vukmirovic, </a><a href="https://adamh.ca/">Adam Hauck</a>' );
 				?> 
-				<p>&copy 2022 Take a Hike Outfitters</p>
-				
+				<div class="copyright_policy">
+					<p>&copy 2022 Take a Hike Outfitters</p>
+					<?php the_privacy_policy_link();?>
+				</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
