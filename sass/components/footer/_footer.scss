@@ -76,6 +76,7 @@
 @media screen and (min-width: $breakpoint600) {
   .site-footer {
     font-size: 1rem;
+    margin-top: 2rem;
   }
 
   .footer-menus {
@@ -86,8 +87,7 @@
   .site-footer a:hover,
   .site-footer a:active,
   .site-footer a:focus {
-    color: black;
-    text-decoration: underline;
+    color: $color__text-input-focus;
   }
 
   .footer-navigation li {

@@ -17,13 +17,27 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+		
+		
 		<?php
 		while ( have_posts() ) :
 			the_post();
 			?>
-			<h1><?php the_title(); ?></h1>
-			
+			<section class="banner-section">
+					<?php
+					if (function_exists ( 'get_field' ) ) :
+					$image = get_field('banner_image');
+					$size = 'full'; // (thumbnail, medium, large, full or custom size)
+						if( $image ) :
+						echo wp_get_attachment_image( $image, $size );					
+						endif; ?>	
+						<h1><?php the_title(); ?></h1>			
+					<?php
+					endif;
+					?>
+			</section>
 		
+			<section class="main-section">
 			<section class="hero-section">				
 				<section class="hero-grid">
 					<?php
@@ -41,7 +55,7 @@ get_header();
     							<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
     							target="<?php echo esc_attr( $link_target ); ?>
     							"><?php echo esc_html( $link_title ); ?>
-									<div class="container">    							
+									<div class="main-container">    							
 										<?php $image = get_sub_field( 'image' );
     									$size = 'large'; // (thumbnail, medium, large, full or custom size)
 										$size2 = 'large';
@@ -51,7 +65,7 @@ get_header();
 										else :
 											echo wp_get_attachment_image( $image, $size );	
     									endif; ?>
-										<h2><?php the_sub_field( 'title' ); ?></h2>
+										<h2 class="title"><?php the_sub_field( 'title' ); ?></h2>
 									</div>
    								 </a>
 							</div>
@@ -83,13 +97,13 @@ get_header();
     							target="<?php echo esc_attr( $link_target ); ?>
     							"><?php echo esc_html( $link_title ); ?>
     							
-									<div class="container"> 
+									<div class="main-container"> 
 										<?php $image = get_sub_field( 'image' );
     									$size = 'large'; // (thumbnail, medium, large, full or custom size)
 										if( $image ) :
         								echo wp_get_attachment_image( $image, $size );					
     									endif; ?>
-										<h2><?php the_sub_field( 'title' ); ?></h2>
+										<h2 class="title"><?php the_sub_field( 'title' ); ?></h2>
 									</div>
    							 	</a>	
 							</div>
@@ -107,7 +121,7 @@ get_header();
 				
 				<?php
 					if (have_rows ( 'end_section' ) ) :
-						while( have_rows( 'end_section' ) ): 
+						while ( have_rows( 'end_section' ) ): 
 							the_row(); 
 							$link = get_sub_field( 'link' );
 	
@@ -117,19 +131,19 @@ get_header();
     						$link_target = $link['target'] ? $link['target'] : '_self';
     						?>
 							
-							<h2><?php the_field( 'workshop_subheading' ); ?></h2>
+							<h2 class="workshop-header"><?php the_field( 'workshop_subheading' ); ?></h2>
 							
     							<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
     							target="<?php echo esc_attr( $link_target ); ?>
     							"><?php echo esc_html( $link_title ); ?>
-									<div class="container"> 
+									<div class="main-container"> 
 										<?php $image = get_sub_field( 'image' );
     									$size = 'full'; // (thumbnail, medium, large, full or custom size)
 								
 										if( $image ) :
         									echo wp_get_attachment_image( $image, $size );					
     									endif; ?>
-										<h2><?php the_sub_field( 'title' ); ?></h2>
+										<h2 class="title"><?php the_sub_field( 'title' ); ?></h2>
 									</div>
    							 	</a>	
 							
@@ -147,12 +161,13 @@ get_header();
 				<?php
 					if (function_exists ( 'get_field' )) :
 					?>
-						<h2><?php the_field( 'instagram_subheading' ); ?></h2>
+						<h2 class="social-header"><?php the_field( 'instagram_subheading' ); ?></h2>
 						<?php echo do_shortcode('[instagram-feed feed=1]'); ?>
 					<?php
 					endif;
 				?>
 				
+			</section>
 			</section>
 			<?php
 		endwhile; // End of the loop.

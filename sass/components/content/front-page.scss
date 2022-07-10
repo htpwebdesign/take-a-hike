@@ -1,80 +1,94 @@
 .home .site-main {
-  margin: 0 5%;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // // grid-template-rows: repeat(10, 1fr);
-  // gap: 15px;
+}
+
+.home .attachment-full {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-section {
+  object-fit: contain;
+  position: relative;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .home h1 {
   color: $color__background-body;
-  text-shadow: 2px 2px 2px $brand-color;
-  // grid-column: 1 / 5;
-  // grid-row: 1 / 2;
-}
-
-/* h2 */
-.container {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.attachment-medium,
-.attachment-large {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  // position: relative;
-}
-
-.container h2 {
-  color: $color__background-body;
-  text-shadow: 2px 2px 2px $brand-color;
-  font-size: 2.25rem;
+  text-shadow: 2px 2px 8px $color__text-input-focus;
+  font-size: 2rem;
   margin: 0;
   position: absolute;
   top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-section {
+  margin: 0 5%;
+}
+
+.main-container {
   width: 100%;
+  height: 100%;
+  position: relative;
   text-align: center;
-  z-index: 1;
+  margin-bottom: 1rem;
 }
 
-.hero-grid {
-  // grid-column: 1/ 5;
-  // grid-row: 2 / 3;
-  // display: grid;
-  // grid-template-columns: 1fr;
-  // grid-auto-rows: 1fr;
-  // gap: 15px;
+.home .attachment-medium,
+.home .attachment-large {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
 }
 
-@media screen and (min-width: 36.125em) {
+.title {
+  color: $color__background-body;
+  text-shadow: 2px 2px 8px $color__text-input-focus;
+  font-size: 2rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-section {
+  margin-bottom: 2rem;
+}
+
+.workshop-header {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: $breakpoint578) {
+  .banner-section {
+    margin-bottom: 4rem;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  .main-container {
+    margin-bottom: 0;
+  }
+
   .hero-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // grid-auto-rows: 1fr;
     gap: 10px;
-    // text-align: center;
-    // margin: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
-  .container {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: relative;
-  }
-
-  .container h2 {
-    font-size: 3rem;
+  .mid-section .title,
+  .end-section .title {
+    font-size: 2.5rem;
   }
 
   .hero-section div:first-child {
@@ -101,19 +115,38 @@
     grid-column: 1 / 3;
     grid-row: 3 / 4;
   }
+
+  .workshop-header {
+    font-size: 2.5rem;
+  }
+
+  .social-header {
+    font-size: 1.75rem;
+  }
 }
 
-@media screen and (min-width: 50em) {
+@media screen and (min-width: $breakpoint800) {
+  .banner-section {
+    margin-bottom: 6rem;
+  }
+
   .hero-grid {
-    // display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
     gap: 15px;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
   }
 
-  .container h2 {
-    font-size: 2.25rem;
+  .home h1 {
+    font-size: 4rem;
+  }
+
+  .mid-section .title {
+    font-size: 3rem;
+  }
+
+  .end-section .title {
+    font-size: 4rem;
   }
 
   .hero-section div:first-child {
@@ -146,7 +179,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 200px 200px;
     gap: 15px;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 
   .mid-section div:first-child {
@@ -159,13 +192,22 @@
     grid-row: 1 / 4;
   }
 
-  .end-section {
-    // grid-column: 1 / 5;
-    // grid-row: 6 / 8;
+  .workshop-header {
+    font-size: 3rem;
+    margin-top: 0;
   }
 
-  .social-section {
-    // grid-column: 2 / 4;
-    // grid-row: 7 / 8;
+  .end-section {
+    margin-bottom: 4rem;
+  }
+
+  .social-header {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint1000) {
+  .hero-section .title {
+    font-size: 2.5rem;
   }
 }
