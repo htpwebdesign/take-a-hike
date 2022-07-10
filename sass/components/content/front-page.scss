@@ -79,10 +79,14 @@
     margin-bottom: 0;
   }
 
+  .mid-section .main-container {
+    margin-bottom: 0.625rem;
+  }
+
   .hero-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    gap: 0.625rem;
     margin-bottom: 4rem;
   }
 
@@ -133,7 +137,7 @@
   .hero-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 1fr;
-    gap: 15px;
+    gap: 0.9375rem;
     margin-bottom: 6rem;
   }
 
@@ -143,6 +147,10 @@
 
   .mid-section .title {
     font-size: 3rem;
+  }
+
+  .mid-section .main-container {
+    margin-bottom: 0;
   }
 
   .end-section .title {
