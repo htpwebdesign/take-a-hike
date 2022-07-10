@@ -9,10 +9,8 @@
 
         &:hover {
             color: $accent-color;
+            border-bottom: 1px solid $accent-color;
         }
-    // .tribe-events-calendar-list__month-separator:after {
-    //     background-color: rgba($accent-color, 0.5);
-    // }
     }
 
     .datepicker {
@@ -20,10 +18,11 @@
             background: $brand-color;
         }
     }
-}
 
-.tribe-events .tribe-events-calendar-list__event-title-link:hover {
-    border-bottom: 1px solid $accent-color;
+    .tribe-events-calendar-day__event-featured-image-link,
+    .tribe-events-calendar-list__event-featured-image {
+        border-radius: 20px;
+    }
 }
 
 .tribe-common--breakpoint-medium.tribe-events {
@@ -32,10 +31,7 @@
     }
 }
 
-.tribe-events .tribe-events-calendar-day__event-featured-image-link,
-.tribe-events .tribe-events-calendar-list__event-featured-image {
-    border-radius: 20px;
-}
+
 
 // Individual page
 
@@ -96,11 +92,18 @@
 
 // font
 
-.tribe-common .tribe-common-h3,
-.tribe-common .tribe-common-h5,
-.tribe-common .tribe-common-h6 {
-    font-family: $font__header;
-    font-size: 1.5em;
+.tribe-common {
+    .tribe-common-h3,
+    .tribe-common-h5,
+    .tribe-common-h6 {
+        font-family: $font__header;
+        font-size: 1.5em;
+    }
+
+    p,
+    .tribe-common-h7 {
+        font-family: $font__main;
+    }
 }
 
 .tribe-events-single-event-title,
@@ -114,13 +117,10 @@
     color: $color__text-main;
 }
 
-.tribe-common {
-    p,
-    .tribe-common-h7 {
-        font-family: $font__main;
-    }
-}
-
+// :root {
+//     --tec-font-family-sans-serif: $font__main;
+//     --form-color-accent-primary: $brand-color;
+// }
 
 .tribe-events .tribe-events-c-view-selector__list-item-text,
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
@@ -147,8 +147,3 @@
         }
     }
 }
-
-// .tribe-common button {
-//     font-family: $font__main;
-//     color: $color__background-body;
-// }
