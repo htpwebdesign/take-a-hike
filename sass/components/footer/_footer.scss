@@ -5,7 +5,7 @@
   text-align: center;
   width: 100%;
   padding: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .site-footer a,
@@ -68,6 +68,10 @@
 }
 
 @media screen and (min-width: $breakpoint448) {
+  .site-footer {
+    margin-top: 3rem;
+  }
+
   .menu-footer-container {
     font-size: 1.25rem;
   }
@@ -76,7 +80,7 @@
 @media screen and (min-width: $breakpoint600) {
   .site-footer {
     font-size: 1rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 
   .footer-menus {
@@ -115,5 +119,11 @@
 
   .copyright_policy p {
     margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint1000) {
+  .site-footer {
+    margin-top: 5rem;
   }
 }

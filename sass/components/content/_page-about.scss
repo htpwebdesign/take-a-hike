@@ -1,0 +1,176 @@
+.page-id-72 .site-main {
+  justify-content: center;
+  text-align: center;
+  margin: 0 5%;
+}
+
+.main-about h1 {
+  font-size: 2.25rem;
+  color: $brand-color;
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.about-us {
+  text-align: left;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.5rem;
+}
+
+.gallery-grid .attachment-medium {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.categories-header {
+  font-size: 2rem;
+}
+
+.activities-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.activities .attachment-medium {
+  display: block;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.activities .title {
+  color: $color__background-body;
+  text-shadow: 2px 2px 8px $color__text-input-focus;
+  font-size: 2rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: $breakpoint378) {
+  .activities .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint448) {
+  .main-about h1 {
+    font-size: 3rem;
+  }
+
+  .categories-header {
+    font-size: 2.25rem;
+  }
+
+  .activities .title {
+    font-size: 2.75rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint578) {
+  .main-about h1 {
+    font-size: 3.5rem;
+  }
+
+  .gallery-grid,
+  .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .categories-header {
+    font-size: 2.4rem;
+  }
+
+  .activities {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint800) {
+  .activities-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-about h1 {
+    font-size: 4rem;
+  }
+
+  .about-us {
+    font-size: 1.25rem;
+  }
+
+  .categories-header {
+    font-size: 2.5rem;
+  }
+
+  .activities .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint1000) {
+  .main-about {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem;
+    margin: 6rem 0;
+  }
+
+  .main-about h1 {
+    font-size: 4.5rem;
+    margin-top: 0;
+  }
+
+  .about-us {
+    margin-bottom: 0;
+  }
+
+  .gallery-about {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+  }
+
+  .about-content {
+    grid-column: 4 / 6;
+    grid-row: 1 / 4;
+  }
+
+  .categories-header {
+    font-size: 2.75rem;
+  }
+
+  .activities .title {
+    font-size: 2.75rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint1280) {
+  .categories-header {
+    font-size: 3rem;
+  }
+
+  .activities .title {
+    font-size: 3rem;
+  }
+}
