@@ -145,6 +145,7 @@
 
 	.search-and-nav {
 		display: flex;
+		font-size: 1.2em;
 	}
 
 	.site-branding, .site-branding img {
@@ -188,6 +189,7 @@
 				}
 
 				li a {
+					font-weight: bold;
 					color: $color__text-main;
 
 					&:hover {
@@ -265,8 +267,10 @@
 }
 
 @media screen and (min-width: $breakpoint1000) {
-	.search-and-nav {
-		font-size: 1.2em;
+	.site-header {
+		.search-and-nav {
+			font-size: 1.4em;
+		}
 	}
 
 	.site-header .site-branding,
@@ -283,11 +287,13 @@
 
 				li {
 					height: 30px;
+					margin: 0 1rem;
 				}
 			}
 		}
 	}
 }
+
 
 // Hamburger Menu
 #hamburger-icon {
