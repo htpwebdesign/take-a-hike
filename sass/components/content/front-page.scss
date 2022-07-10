@@ -215,7 +215,41 @@
 }
 
 @media screen and (min-width: $breakpoint1000) {
+  .home h1 {
+    font-size: 5rem;
+  }
+
   .hero-section .title {
     font-size: 2.5rem;
+  }
+
+  .mid-section .title {
+    font-size: 4rem;
+  }
+
+  .workshop-header {
+    font-size: 3.75rem;
+  }
+
+  .end-section .title {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: $breakpoint1280) {
+  .home h1 {
+    font-size: 8rem;
+  }
+
+  .hero-section .title {
+    font-size: 3.25rem;
+  }
+
+  .mid-section .title {
+    font-size: 6rem;
+  }
+
+  .end-section .title {
+    font-size: 7rem;
   }
 }
