@@ -85,3 +85,22 @@ table.shop_table_responsive {
 		}
 	}
 }
+
+.page-id-15 {
+	.table.shop_table_responsive tr td {
+		.product-thumbnail {
+			text-align: center;
+		}
+	}
+
+	table.shop_table_responsive tr td.product-remove a {
+				text-decoration: none;
+				font-size: 2rem;
+				color: $brand-color;
+
+				&:hover {
+					color: $accent-color;
+				}
+	}
+}
+

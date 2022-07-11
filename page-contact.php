@@ -21,16 +21,22 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 			?>
-			<h1><?php the_title() ?></h1>
-			<section class="contact-form"><?php echo do_shortcode('[wpforms id="516"]') ?></section>
-			<?php
-			if ( function_exists ( 'get_field' ) ):
-			?>
+			<div class="form-address-social">
+				<section class="contact-form">
+					<h1><?php the_title() ?></h1>
+					<?php echo do_shortcode('[wpforms id="516"]') ?>
+				</section>
+				<?php
+				if ( function_exists ( 'get_field' ) ):
+				?>
+			<div class="address-social">
 				<section class="contact-address">
 					<?php
 					//Store Address
 					if ( get_field ( 'contact_address' ) ):
+						$field = get_field_object('contact_address');
 						?>
+						<h2><?php echo $field['label']; ?></h2>
 						<p><?php the_field( 'contact_address' ) ?></p>
 						<?php
 					endif;
@@ -57,6 +63,9 @@ get_header();
 					<?php wp_nav_menu(array('theme_location' => 'social')); ?>
 					</nav>
 				</section>
+			</div>
+			</div>
+			
 
 				<section class="contact-hours">
 					<?php

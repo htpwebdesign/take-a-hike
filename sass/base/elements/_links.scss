@@ -20,3 +20,21 @@ a {
 		outline: 0;
 	}
 }
+
+.page-id-15 {
+	.return-to-shop {
+		text-align: center;
+		margin-top: 3rem;
+
+		a {
+			text-decoration: none;
+			color: $color__background-body;
+			background-color: $brand-color;
+			padding: 1rem;
+
+			&:hover {
+				background-color: $accent-color;
+			}
+		}
+	}
+}
