@@ -117,11 +117,6 @@
     color: $color__text-main;
 }
 
-// :root {
-//     --tec-font-family-sans-serif: $font__main;
-//     --form-color-accent-primary: $brand-color;
-// }
-
 .tribe-events .tribe-events-c-view-selector__list-item-text,
 .tribe-common--breakpoint-medium.tribe-common .tribe-common-form-control-text__input,
 .tribe-common .tribe-common-form-control-text__input,
@@ -144,6 +139,20 @@
         .day,
         .dow {
             font-family: $font__main;
+        }
+    }
+}
+
+// Heading
+
+.tribe-events {
+    .tribe-events-c-breadcrumbs__list-item:first-child {
+        display: none;
+    }
+    .tribe-events-c-breadcrumbs__list-item {
+        .tribe-events-c-breadcrumbs__list-item-text {
+            font-family: $font__header;
+            font-size: 3.5rem;
         }
     }
 }

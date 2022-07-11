@@ -83,6 +83,16 @@
 
 	.main-navigation ul {
 		display: flex;
+
+		li {
+			&:hover > ul,
+			&.focus > ul {
+				left: -0.5em;
+				gap: 0.5em;
+				background-color: $color__background-body;
+				padding: 0.5em;
+			}
+		}
 	}
 }
 
