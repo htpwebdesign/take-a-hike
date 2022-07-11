@@ -5,7 +5,8 @@
   text-align: center;
   width: 100%;
   padding: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  font-size: 0.875rem;
 }
 
 .site-footer a,
@@ -70,17 +71,13 @@
 @media screen and (min-width: $breakpoint448) {
   .site-footer {
     margin-top: 3rem;
-  }
-
-  .menu-footer-container {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
 @media screen and (min-width: $breakpoint600) {
   .site-footer {
-    font-size: 1rem;
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
 
   .footer-menus {
@@ -107,13 +104,11 @@
   .site-info {
     margin-top: 1.5rem;
     text-align: center;
-    // text-align: left;
   }
 
   .copyright_policy {
     display: flex;
     justify-content: center;
-    // justify-content: flex-start;
     align-items: baseline;
   }
 
@@ -124,6 +119,6 @@
 
 @media screen and (min-width: $breakpoint1000) {
   .site-footer {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 }

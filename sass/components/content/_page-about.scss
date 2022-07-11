@@ -24,7 +24,6 @@
 .gallery-grid .attachment-medium {
   min-width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .categories-header {
@@ -42,6 +41,7 @@
   position: relative;
   text-align: center;
   margin-bottom: 0.5rem;
+  overflow: hidden;
 }
 
 .activities .attachment-medium {
@@ -126,6 +126,14 @@
 
   .activities .title {
     font-size: 2rem;
+  }
+
+  .activities .attachment-medium {
+    transition: 0.7s;
+  }
+
+  .activities .attachment-medium:hover {
+    transform: scale(1.2);
   }
 }
 

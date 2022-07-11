@@ -136,7 +136,7 @@ get_header();
     							"><?php echo esc_html( $link_title ); ?>
 									<div class="main-container"> 
 										<?php $image = get_sub_field( 'image' );
-    									$size = 'full'; // (thumbnail, medium, large, full or custom size)
+    									$size = 'large'; // (thumbnail, medium, large, full or custom size)
 								
 										if( $image ) :
         									echo wp_get_attachment_image( $image, $size );					
