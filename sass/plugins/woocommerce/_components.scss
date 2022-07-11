@@ -230,7 +230,9 @@ p.no-comments {
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: $woocommerce__color-info;
+	// background-color: $woocommerce__color-info;
+	background-color: $color__background-body;
+	text-align: center;
 }
 
 .woocommerce-error {

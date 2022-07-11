@@ -1,0 +1,28 @@
+// Empty cart
+.page-id-15 {
+    #post-15 {
+        margin-top: 10rem;
+    }
+}
+
+// Cart with items in it
+.page-id-15 {
+    .woocommerce-cart-form {
+        padding: 0 2rem;
+
+        table {
+            .cart-item {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+#post-15 > div > div > form > table {
+    border-collapse: separate;
+    border-spacing: 0 50px;
+
+    .product-thumbnail {
+        text-align: center;
+    }
+}
