@@ -167,20 +167,29 @@
     li {
         list-style: square;
         padding: .25rem;
+        
     }
 }
 
 
 .tabs.wc-tabs.resp-tabs-list {
+
     li {
         padding-left: 20px;
         text-transform: uppercase;
-        
+        font-weight: 600;
+      
         a {
             text-decoration: none;
+            color: $brand-color;
         }
     }
 }
+
+li.resp-tab-active {
+    background-color: lightgrey;
+}
+
 
 .comment-form {
     .comment-form-author, .comment-form-email {
@@ -194,22 +203,37 @@
 // end desktop tabs
 
 
+// related products section
+section.related.products {
+    text-align: center;
+    order: 2;
+    
+    li a {
+        text-decoration: none;
+        color: $brand-color;
+    }
+}
+
+// end related products section
+
+
+
+
 // you might also like section
 .up-sells.upsells.products {
     text-align: center;
     order: 3;
+
+    li a {
+        text-decoration: none;
+        color: $brand-color;
+    }
 }
 
 // end you might almost like
 
 
-// related products section
-section.related.products {
-    text-align: center;
-    order: 2;
-}
 
-// end related products section
 
 
 ul.products li.product img {
@@ -226,10 +250,6 @@ ul.products li.product img {
 
 }
 
-
-li.resp-tab-active {
-    background-color: lightgray;
-}
 
 .up-sells.upsells.products, .related.products {
     grid-column-start: 1;
@@ -257,3 +277,19 @@ li.resp-tab-active {
     display: none;
 }
 
+//for bundles 
+.summary-add-to-cart-form.summary-add-to-cart-form-bundle {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    .bundled_product_summary .bundled_product_images img {
+        width: 150px;
+    }
+}
+.products.bundled_products.columns-3 {
+    display: flex;
+}
+
+.bundle_button {
+    text-align: center;
+}
