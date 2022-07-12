@@ -82,6 +82,10 @@
     }
 }
 
+.resp-arrow {
+    margin-top: .5rem;
+}
+
 
 // desktop tabs
 .woocommerce-Tabs-panel.panel.entry-content.wc-tab.resp-tab-content.resp-tab-content-active {
@@ -116,11 +120,14 @@
 }
 
 .comment-form {
-    input {
+    .comment-form-author, .comment-form-email {
+        input {
         width: 100%;
         max-width: 287px;
+        }
     }
 }
+
 // end desktop tabs
 
 
