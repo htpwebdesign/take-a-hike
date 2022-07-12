@@ -1,8 +1,9 @@
-.woocommerce-breadcrumb {
+.single.single-product .woocommerce-breadcrumb {
     margin: 1rem 10%;    
 }
 
 .site-main > .product.type-product {
+
     margin: 0 10%;
     display: flex;
     flex-direction: column;
@@ -10,8 +11,8 @@
     @media screen and (min-width: 769px) {
         display: grid;
         grid-template-columns: minmax(300px, 40%) 1fr;
-        gap: 10px;
-       
+        column-gap: 1rem;
+        row-gap: 2rem;    
     }
 }
 
@@ -24,9 +25,20 @@
     }
 }
 
-.woocommerce-Tabs-panel {
-    margin-top: 0;
-    padding-top: 0;
+.resp-tabs-container {
+    a {
+        color: $brand-color;
+    }
+
+    a:hover {
+        color: $accent-color;
+    }
+}
+
+.resp-tab-active {
+    a {
+    color: $accent-color;
+    }
 }
 
 .woocommerce-product-gallery {
@@ -43,6 +55,12 @@
 .summary.entry-summary {
     text-align: center;
 
+    .product_meta {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
     @media screen and (min-width: 769px) {
         text-align: left;
     }
@@ -55,6 +73,7 @@
 
 .woocommerce-tabs.wc-tabs-wrapper {
     order: 1;
+    padding-bottom: 2rem;
 
     @media screen and (min-width: 769px) {
         grid-row-start: 2;
@@ -62,6 +81,54 @@
         grid-column-end: 3;
     }
 }
+
+.resp-arrow {
+    margin-top: .5rem;
+}
+
+
+// desktop tabs
+.woocommerce-Tabs-panel.panel.entry-content.wc-tab.resp-tab-content.resp-tab-content-active {
+    background-color: yellow;
+    margin-top: 0;
+
+    h2 {
+        margin: 0;
+    }
+    
+    ul {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+    
+    li {
+        list-style: square;
+        padding: .25rem;
+    }
+}
+
+
+.tabs.wc-tabs.resp-tabs-list {
+    li {
+        padding-left: 20px;
+        text-transform: uppercase;
+        
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.comment-form {
+    .comment-form-author, .comment-form-email {
+        input {
+        width: 100%;
+        max-width: 287px;
+        }
+    }
+}
+
+// end desktop tabs
 
 
 
@@ -116,3 +183,16 @@ li.resp-tab-active {
     grid-column-start: 2;
 }
 
+.stock.in-stock {
+    display: none;
+}
+
+.single_add_to_cart_button {
+    padding: .5em 1em;
+    background-color: $brand-color;
+    color: $color__background-body;
+}
+
+.single_add_to_cart_button:hover{
+    background-color: $accent-color;
+}
