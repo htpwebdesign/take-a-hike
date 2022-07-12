@@ -162,6 +162,7 @@
   .about-content {
     grid-column: 4 / 6;
     grid-row: 1 / 4;
+    align-self: center;
   }
 
   .categories-header {
@@ -180,5 +181,20 @@
 
   .activities .title {
     font-size: 3rem;
+  }
+
+  .main-about {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 75rem;
+    margin: 6rem auto;
+  }
+
+  .gallery-about {
+    grid-column: 1 / 3;
+  }
+
+  .about-content {
+    grid-column: 3 / 6;
+    align-self: center;
   }
 }
