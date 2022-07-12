@@ -155,7 +155,6 @@ table.shop_table_responsive {
 	}
 
 	.showcoupon {
-		// text-decoration: none;
 		color: $brand-color;
 	}
 
@@ -169,10 +168,6 @@ table.shop_table_responsive {
 
 @media screen and (min-width: $breakpoint600) {
 	#post-16 {
-		label {
-			// display: inline-block;
-		}
-
 		.select2-con {
 			width: 10rem;
 		}

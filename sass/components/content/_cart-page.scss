@@ -18,8 +18,6 @@
     }
 
     .product.type-product {
-        // max-width: 350px;
-        // margin: 0 auto;
         border-bottom: 1px solid $brand-color;
 
         .woocommerce-loop-product__link {
@@ -41,6 +39,11 @@
         color: $color__background-body;
         border: none;
         margin-top: 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $accent-color;
+          }
     }
 }
 
@@ -85,11 +88,31 @@
     padding: 0.5rem;
     text-align: center;
 
+    &:hover {
+    background-color: $accent-color;
+
+    }
+
 
     a {
         color: $color__background-body;
         text-decoration: none;
 
+    }
+}
+
+@media screen and (min-width: 43.75em) {
+    .woocommerce-shipping-totals {
+        position: relative;
+
+        th {
+            position: absolute;
+            top: 0;
+        }
+
+        #shipping_method {
+            padding: 0;
+        }
     }
 }
 
