@@ -278,6 +278,23 @@ ul.products li.product img {
 }
 
 //for bundles 
+
+
+.products.bundled_products.columns-3 {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 1300px) {
+        flex-wrap: nowrap;
+    }
+
+    li {
+        margin: 0 auto;
+        padding: 0 .5rem;
+    }
+}
+
+
 .summary-add-to-cart-form.summary-add-to-cart-form-bundle {
     grid-column-start: 1;
     grid-column-end: 3;
