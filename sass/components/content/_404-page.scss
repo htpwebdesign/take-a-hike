@@ -12,3 +12,14 @@
 .error404 .site-footer {
     margin-top: 0;
 }
+
+
+.error404 .search-submit {
+    padding: .5em 1em;
+    background-color: $brand-color;
+    color: $color__background-body;
+}
+
+.error404 .search-submit:hover {
+    background-color: $accent-color;
+}
