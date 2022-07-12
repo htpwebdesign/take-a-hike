@@ -2,3 +2,8 @@ table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
+
+#post-15 > div > div > form > table a {
+	text-decoration: none;
+	color: $brand-color;
+}

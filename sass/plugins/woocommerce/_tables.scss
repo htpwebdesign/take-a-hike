@@ -86,10 +86,14 @@ table.shop_table_responsive {
 	}
 }
 
+
+//Cart Page tables
 .page-id-15 {
 	.table.shop_table_responsive tr td {
 		.product-thumbnail {
 			text-align: center;
+			background-color: $brand-color;
+			color: $color__background-body;
 		}
 	}
 
@@ -102,5 +106,75 @@ table.shop_table_responsive {
 					color: $accent-color;
 				}
 	}
+
+	table.shop_table_responsive tr td.product-thumbnail::before {
+		display: none;
+	}
+
+	.shop_table.shop_table_responsive {
+		border-bottom: 2px solid $brand-color;
+	}
 }
 
+.product-subtotal {
+	background-color: $brand-color;
+	color: $color__background-body;
+}
+
+@media screen and (min-width: 48em) {
+	.product-subtotal {
+		background-color: $color__background-body;
+		color: $brand-color;
+	}
+}
+
+//Checkout Page
+//Checkout Page
+#post-16 {
+	#shipping_method {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.wc_payment_methods {
+		list-style: none;
+		padding: 0;
+	}
+
+	.wc_payment_methods.payment_methods {
+		margin: 0;
+	}
+
+	label {
+		display: block;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	.showcoupon {
+		// text-decoration: none;
+		color: $brand-color;
+	}
+
+	button {
+		border: none;
+		background-color: $brand-color;
+		color: $color__background-body;
+		padding: 0.5rem;
+	}
+}
+
+@media screen and (min-width: $breakpoint600) {
+	#post-16 {
+		label {
+			// display: inline-block;
+		}
+
+		.select2-con {
+			width: 10rem;
+		}
+	}	
+}

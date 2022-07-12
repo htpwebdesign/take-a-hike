@@ -21,3 +21,44 @@
 		}
 	}
 }
+
+//Checkout Page
+#post-16 {
+	padding: 0 2rem;
+}
+
+@media screen and (min-width: $breakpoint600) {
+	#post-16 {
+		max-width: $breakpoint800;
+		margin: 0 auto;
+
+		.woocommerce-billing-fields__field-wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		#billing_address_2_field {
+			align-self: center;
+			margin-bottom: 0;
+		}
+
+		#payment > ul > li > div {
+			max-width: 37.5rem;
+			margin: 0 auto;
+		}
+
+		#payment > ul > li > label {
+			max-width: 37.5rem;
+			margin: 0 auto;
+		}
+
+		#order_review > table > thead > tr > th {
+			text-align: start;
+		}
+
+		#order_review > table > tfoot tr th {
+			text-align: start;
+		}
+	}	
+}
+
