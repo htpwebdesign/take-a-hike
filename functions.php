@@ -222,9 +222,9 @@ function wpb_login_logo() { ?>
     <style type="text/css"> 
         #login h1 a, .login h1 a { 
             background-image: url(https://takeahikeoutfitters.bcitwebdeveloper.ca/wp-content/uploads/2022/06/cropped-tah-logo.png); 
-        height:300px;   /* those lines are for custom styling for the logo */ 
-        width:300px; 
-        background-size: 300px 300px; 
+        height:150px;   /* those lines are for custom styling for the logo */ 
+        width:150px; 
+        background-size: 150px 150px; 
         background-repeat: no-repeat; 
         padding-bottom: 10px; 
         } 
