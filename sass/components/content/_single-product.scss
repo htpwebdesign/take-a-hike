@@ -25,21 +25,7 @@
     }
 }
 
-.resp-tabs-container {
-    a {
-        color: $brand-color;
-    }
 
-    a:hover {
-        color: $accent-color;
-    }
-}
-
-.resp-tab-active {
-    a {
-    color: $accent-color;
-    }
-}
 
 .woocommerce-product-gallery {
     width: 100%;
@@ -55,10 +41,44 @@
 .summary.entry-summary {
     text-align: center;
 
+    a {
+        text-decoration: none;
+        color: $brand-color;
+    }
+
+    a:hover {
+        color: $accent-color;
+    }
+
     .product_meta {
         display: flex;
         flex-direction: column;
         margin-bottom: 2rem;
+    }
+
+    .variations {
+        tr {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 80%;
+            max-width: 200px;
+            margin: 0 auto;
+
+            @media screen and (min-width: 769px) {
+                margin: 0
+                
+            }
+
+            .value {
+                display: flex;
+                flex-direction: column;
+
+                @media screen and (min-width: 769px) {
+                    flex-direction: row;                    
+                }
+            }
+        }
     }
 
     @media screen and (min-width: 769px) {
@@ -66,9 +86,29 @@
     }
 }
 
+
+// add to cart button
 .woocommerce-variation-add-to-cart {
     display: flex;
+    justify-content: center;
+
+    @media screen  and (min-width: 769px) {
+        justify-content: flex-start;
+        
+    }
 }
+
+.single_add_to_cart_button {
+    padding: .5em 1em;
+    background-color: $brand-color;
+    color: $color__background-body;
+}
+
+.single_add_to_cart_button:hover{
+    background-color: $accent-color;
+}
+
+// end add to cart button
 
 
 .woocommerce-tabs.wc-tabs-wrapper {
@@ -82,14 +122,37 @@
     }
 }
 
+// mobile tabs
+.woocommerce-product-attributes.shop_attributes {
+        border-spacing:10px 0;
+    th {
+        text-align: left;
+    }
+}
+
 .resp-arrow {
     margin-top: .5rem;
 }
 
+.resp-tabs-container {
+    a {
+        color: $brand-color;
+    }
+
+    a:hover {
+        color: $accent-color;
+    }
+}
+
+.resp-tab-active {
+    a {
+    color: $accent-color;
+    }
+}
+// mobile tabs
 
 // desktop tabs
 .woocommerce-Tabs-panel.panel.entry-content.wc-tab.resp-tab-content.resp-tab-content-active {
-    background-color: yellow;
     margin-top: 0;
 
     h2 {
@@ -104,20 +167,29 @@
     li {
         list-style: square;
         padding: .25rem;
+        
     }
 }
 
 
 .tabs.wc-tabs.resp-tabs-list {
+
     li {
         padding-left: 20px;
         text-transform: uppercase;
-        
+        font-weight: 600;
+      
         a {
             text-decoration: none;
+            color: $brand-color;
         }
     }
 }
+
+li.resp-tab-active {
+    background-color: lightgrey;
+}
+
 
 .comment-form {
     .comment-form-author, .comment-form-email {
@@ -131,16 +203,38 @@
 // end desktop tabs
 
 
-
-.up-sells.upsells.products {
-    text-align: center;
-    order: 3;
-}
-
+// related products section
 section.related.products {
     text-align: center;
     order: 2;
+    
+    li a {
+        text-decoration: none;
+        color: $brand-color;
+    }
 }
+
+// end related products section
+
+
+
+
+// you might also like section
+.up-sells.upsells.products {
+    text-align: center;
+    order: 3;
+
+    li a {
+        text-decoration: none;
+        color: $brand-color;
+    }
+}
+
+// end you might almost like
+
+
+
+
 
 ul.products li.product img {
     margin: 0 auto
@@ -156,10 +250,6 @@ ul.products li.product img {
 
 }
 
-
-li.resp-tab-active {
-    background-color: lightgray;
-}
 
 .up-sells.upsells.products, .related.products {
     grid-column-start: 1;
@@ -187,12 +277,19 @@ li.resp-tab-active {
     display: none;
 }
 
-.single_add_to_cart_button {
-    padding: .5em 1em;
-    background-color: $brand-color;
-    color: $color__background-body;
+//for bundles 
+.summary-add-to-cart-form.summary-add-to-cart-form-bundle {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    .bundled_product_summary .bundled_product_images img {
+        width: 150px;
+    }
+}
+.products.bundled_products.columns-3 {
+    display: flex;
 }
 
-.single_add_to_cart_button:hover{
-    background-color: $accent-color;
+.bundle_button {
+    text-align: center;
 }
