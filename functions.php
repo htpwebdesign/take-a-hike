@@ -270,27 +270,11 @@ add_action( 'login_enqueue_scripts', 'my_login_form' );
 
 
 /**
- * Block Editor Styles
+ * Editor Styles
  */
+add_theme_support( 'editor-styles' );
+add_editor_style('editor-style.css');
 
-add_editor_style();
-add_theme_support( 'editor-style' );
 
-
-// function add_editor_style( $stylesheet = 'editor-style.css' ) {
-//     global $editor_styles;
- 
-//     add_theme_support( 'editor-style' );
-
-// 	$editor_styles = (array) $editor_styles;
-//     $stylesheet    = (array) $stylesheet;
- 
-//     if ( is_rtl() ) {
-//         $rtl_stylesheet = str_replace( '.css', '-rtl.css', $stylesheet[0] );
-//         $stylesheet[]   = $rtl_stylesheet;
-//     }
- 
-//     $editor_styles = array_merge( $editor_styles, $stylesheet );
-// }
 
 
