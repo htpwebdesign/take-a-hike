@@ -215,3 +215,55 @@ function yoast_to_bottom(){
 }
 add_filter( 'wpseo_metabox_prio', 'yoast_to_bottom' );
 
+/**
+ *  Change Logo on Login Page
+ */
+function wpb_login_logo() { ?> 
+    <style type="text/css"> 
+        #login h1 a, .login h1 a { 
+            background-image: url(https://takeahikeoutfitters.bcitwebdeveloper.ca/wp-content/uploads/2022/06/cropped-tah-logo.png); 
+        height:300px;   /* those lines are for custom styling for the logo */ 
+        width:300px; 
+        background-size: 300px 300px; 
+        background-repeat: no-repeat; 
+        padding-bottom: 10px; 
+        } 
+    </style> 
+<?php } 
+add_action( 'login_enqueue_scripts', 'wpb_login_logo' ); 
+
+/**
+ * Change Logo Link to Home Page 
+ */
+
+function my_login_logo_url() { 
+    return home_url(); 
+} 
+add_filter( 'login_headerurl', 'my_login_logo_url' ); 
+function my_login_logo_url_title() { 
+    return 'https://takeahikeoutfitters.bcitwebdeveloper.ca/'; 
+} 
+add_filter( 'login_headertext', 'my_login_logo_url_title' );
+
+/**
+ * Style Login Form & Background
+ */
+
+function my_login_form() { ?> 
+	<style type="text/css"> 
+  body.login div#login form#loginform { 
+   background-color:#2b6638; 
+   border-radius:2rem; 
+   color: #fff;
+   } 
+   body.login div#login p.message {
+	border-left: 4px solid #8d2c19;
+   }
+   body.login div#login form#loginform .button {
+	background: #8d2c19;
+	color: #fff;
+	border: none;
+   }
+	</style> 
+<?php } 
+add_action( 'login_enqueue_scripts', 'my_login_form' );
