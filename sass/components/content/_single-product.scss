@@ -1,8 +1,9 @@
-.woocommerce-breadcrumb {
+.single.single-product .woocommerce-breadcrumb {
     margin: 1rem 10%;    
 }
 
 .site-main > .product.type-product {
+
     margin: 0 10%;
     display: flex;
     flex-direction: column;
@@ -54,6 +55,12 @@
 .summary.entry-summary {
     text-align: center;
 
+    .product_meta {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
     @media screen and (min-width: 769px) {
         text-align: left;
     }
@@ -66,6 +73,7 @@
 
 .woocommerce-tabs.wc-tabs-wrapper {
     order: 1;
+    padding-bottom: 2rem;
 
     @media screen and (min-width: 769px) {
         grid-row-start: 2;
@@ -92,6 +100,25 @@
     li {
         list-style: square;
         padding: .25rem;
+    }
+}
+
+
+.tabs.wc-tabs.resp-tabs-list {
+    li {
+        padding-left: 20px;
+        text-transform: uppercase;
+        
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.comment-form {
+    input {
+        width: 100%;
+        max-width: 287px;
     }
 }
 // end desktop tabs
