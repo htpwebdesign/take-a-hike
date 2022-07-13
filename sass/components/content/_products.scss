@@ -29,18 +29,34 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 1.5rem;
+        text-align: center;
+
+        .button.product_type_simple.add_to_cart_button, 
+        .button.product_type_bundle.product_type_bundle_input_required.add_to_cart_button, 
+        .button.product_type_variable.add_to_cart_button {
+            width: 150px;
+            margin: 0 auto;
+            border: 1px solid;
+            border-color: #ccc #ccc #bbb;
+            border-radius: 3px;
+            background: $brand-color;
+            color: white;
+            line-height: 1;
+            padding: .5em 1em;
+
+            :hover {
+                background-color: $accent-color;
+            }
+
+        }
     }
 
     ul {
-        text-align: center;
-
         li.product.type-product {
             margin: 0 auto;
             width: 150px;
         }
-
-
 
         .star-rating {
                 margin: 0 auto;
