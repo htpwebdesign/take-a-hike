@@ -9,17 +9,26 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            margin-left: 0;
+            margin: 2rem 0 0 0;
             padding-left: 0;
             font-size: 120%;
             width: 100%;
 
             li {
-                margin: 10px;
+                margin: .65rem;
+
+
+                a {
+                    padding: .5rem;
+                    background-color: #e6e6e6;
+                    color: $brand-color;
+
+                }
 
                 .current {
+                    padding: .5rem;
                     color: $accent-color;
-                    text-decoration: underline;
+
                 }
             }
         }
@@ -31,27 +40,6 @@
         justify-content: center;
         gap: 1.5rem;
         text-align: center;
-
-        .button.product_type_simple.add_to_cart_button, 
-        .button.product_type_bundle.product_type_bundle_input_required.add_to_cart_button, 
-        .button.product_type_variable.add_to_cart_button {
-            width: 150px;
-            margin: 0 auto;
-            border: 1px solid;
-            border-color: #ccc #ccc #bbb;
-            border-radius: 3px;
-            background: $brand-color;
-            color: white;
-            line-height: 1;
-            padding: .5em 1em;
-        }
-
-        .button.product_type_simple.add_to_cart_button:hover, 
-        .button.product_type_bundle.product_type_bundle_input_required.add_to_cart_button:hover, 
-        .button.product_type_variable.add_to_cart_button:hover
-        {
-            background-color: $accent-color;
-        }
     }
 
     ul {
@@ -74,4 +62,3 @@
         }
     }
 }
-
