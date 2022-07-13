@@ -44,11 +44,13 @@
             color: white;
             line-height: 1;
             padding: .5em 1em;
+        }
 
-            :hover {
-                background-color: $accent-color;
-            }
-
+        .button.product_type_simple.add_to_cart_button:hover, 
+        .button.product_type_bundle.product_type_bundle_input_required.add_to_cart_button:hover, 
+        .button.product_type_variable.add_to_cart_button:hover
+        {
+            background-color: $accent-color;
         }
     }
 
