@@ -68,9 +68,20 @@
     font-size: 1.25rem;
   }
 
+  .post-thumbnail {
+    overflow: hidden;
+    max-width: 300px;
+  }
+
   .search .attachment-post-thumbnail {
     max-width: 300px;
     max-height: 300px;
+    transition: 0.7s;
+    object-fit: cover;
+  }
+
+  .search .attachment-post-thumbnail:hover {
+    transform: scale(1.2);
   }
 }
 
