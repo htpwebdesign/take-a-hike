@@ -168,8 +168,15 @@
         a {
             text-decoration: none;
             padding-left: 20px;
+            color: $brand-color;
         }
     }
+}
+
+.woocommerce-Tabs-panel.woocommerce-Tabs-panel--description.panel.entry-content.wc-tab.resp-tab-content p {
+color: #404040 !important;
+font-family: "Montserrat", sans-serif !important;
+line-height: 1.75 !important;
 }
 
 li.resp-tab-active {
