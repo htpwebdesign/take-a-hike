@@ -275,6 +275,56 @@ add_action( 'login_enqueue_scripts', 'my_login_form' );
 add_theme_support( 'editor-styles' );
 add_editor_style('editor-style.css');
 
+/**
+ * Remove dashboard widgets
+ */
+function remove_dashboard_widgets() {
+//first parameter -> slig/id of the widget
+//second parameter -> where the meta box is displayed, it can be page, post, dashboard etc.
+//third parameter -> position of the meta box. If you have used wp_add_dashboard_widget to create the widget or 
+//deleting default widget then provide the value "normal".
+ remove_meta_box('wc_admin_dashboard_setup', 'dashboard', "normal");
+ remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
+ remove_meta_box('dashboard_activity', 'dashboard', 'normal');
+ remove_meta_box('jetpack_summary_widget', 'dashboard', 'normal');
+ remove_meta_box('tribe_dashboard_widget', 'dashboard', 'normal');
+ remove_meta_box('wc_newsletter_subscription_stats', 'dashboard', 'normal');
+ remove_meta_box('dashboard_right_now', 'dashboard', 'normal');
+ remove_meta_box('dashboard_quick_press', 'dashboard', 'side');
+ remove_meta_box('dashboard_primary', 'dashboard', 'side');
+ remove_action( 'welcome_panel', 'wp_welcome_panel' ); // Removes the welcome panel
+}
+add_action("wp_dashboard_setup", "remove_dashboard_widgets");
+
+/**
+ * Adding custom widgets into dashboard
+ */
+function my_custom_dashboard_widgets() {
+	global $wp_meta_boxes;
+	wp_add_dashboard_widget('custom_help_widget', 'Video Tutorials', 'custom_dashboard_help');
+	}
+	function custom_dashboard_help() {
+	echo '<p>Welcome to your website. Here you will find video tutorials on how to add, remove, and edit various content</p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=4vQd5e3oX8s" target="_blank">Add, Edit, and Remove Users</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=eBt7zDEd_NY" target="_blank">Edit social media sharing buttons</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=FAqqtB4hPFU" target="_blank">Modify Instagram feed on the home page</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=VkxbcKxRkfg" target="_blank">Edit content on pages</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=VaZwK9d3b2A" target="_blank">Add and edit events</a></p>';
+}
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 
 
-
+// Remove admin menu links for non-Administrator accounts
+function fwd_remove_admin_links() {
+	if ( !current_user_can( 'manage_options' ) ) {
+		remove_menu_page( 'edit.php' );           // Remove Posts link
+    	remove_menu_page( 'edit-comments.php' );  // Remove Comments link
+		remove_menu_page( 'ivory-search' );
+		remove_menu_page( 'wpforms-overview' );
+		remove_menu_page( 'themes.php' );
+		remove_menu_page( 'edit.php?post_type=acf-field-group' );
+		remove_menu_page( 'tools.php' );
+		remove_menu_page( 'plugins.php' );
+	}
+}
+add_action( 'admin_menu', 'fwd_remove_admin_links' );
