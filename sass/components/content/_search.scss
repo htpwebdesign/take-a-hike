@@ -27,8 +27,7 @@
 }
 
 .search .attachment-post-thumbnail {
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 200px;
 }
 
 .search .search-field {
@@ -68,14 +67,13 @@
     font-size: 1.25rem;
   }
 
-  .post-thumbnail {
+  .search .post-thumbnail {
     overflow: hidden;
-    max-width: 300px;
   }
 
   .search .attachment-post-thumbnail {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     transition: 0.7s;
     object-fit: cover;
   }

@@ -21,6 +21,8 @@
 .site-footer ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -37,10 +39,6 @@
   justify-content: center;
 }
 
-.menu-footer-container {
-  flex-wrap: wrap;
-}
-
 .menu-footer-container,
 .menu-social-container,
 .copyright_policy {
@@ -48,18 +46,12 @@
 }
 
 .footer-navigation li {
-  padding-right: 0.75rem;
-  padding-top: 0.25rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
 }
 
 .social-navigation li {
   padding-right: 0.5rem;
-}
-
-.footer-navigation li:last-child,
-.social-navigation li:last-child {
-  margin-right: 0;
 }
 
 .social-navigation svg {
