@@ -96,6 +96,14 @@
     }
 }
 
+.single_add_to_cart_button.button.alt.disabled.wc-variation-selection-needed {
+    margin: 0;
+    @media screen and (min-width: 769px) {
+        margin-left: 0;
+    }
+    
+}
+
 // end add to cart button
 
 .woocommerce-tabs.wc-tabs-wrapper {
@@ -207,6 +215,12 @@ ul.products li.product img {
 section.related.products {
     text-align: center;
     order: 2;
+
+    .products.columns-3 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
     
     li a {
         text-decoration: none;
