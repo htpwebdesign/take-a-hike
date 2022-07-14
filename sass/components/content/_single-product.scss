@@ -35,6 +35,15 @@
     }
 } 
 
+.star-rating {
+    margin: 0 auto;
+
+    @media screen and (min-width: 769px) {
+        margin-left: 0;  
+    }
+}
+
+
 .summary.entry-summary {
     text-align: center;
     margin-top: 0;
@@ -64,8 +73,7 @@
             margin: 0 auto;
 
             @media screen and (min-width: 769px) {
-                margin: 0
-                
+                margin: 0              
             }
 
             .value {
@@ -97,7 +105,6 @@
     @media screen and (min-width: 769px) {
         margin-left: 0;
     }
-    
 }
 
 .woocommerce-tabs.wc-tabs-wrapper {
@@ -151,8 +158,7 @@
     
     li {
         list-style: square;
-        padding: .25rem;
-        
+        padding: .25rem;     
     }
 }
 
