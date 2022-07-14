@@ -219,7 +219,11 @@ section.related.products {
     .products.columns-3 {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 4rem 1.5rem;
+
+        li.product.last {
+            margin: 0 auto;
+        }
     }
     
     li a {
