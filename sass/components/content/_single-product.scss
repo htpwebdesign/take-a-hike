@@ -17,7 +17,6 @@
 }
 
 .product.type-product .woocommerce-tabs.wc-tabs-wrapper {
-
     @media screen and (min-width: 769px) {
     display: grid !important;
     grid-template-columns: minmax(300px, 40%) 1fr;
@@ -38,6 +37,7 @@
 
 .summary.entry-summary {
     text-align: center;
+    margin-top: 0;
 
     a {
         text-decoration: none;
@@ -84,11 +84,7 @@
     }
 }
 
-
-// add to cart button
 .woocommerce-variation-add-to-cart {
-    // display: flex;
-    // justify-content: center;
 
     @media screen  and (min-width: 769px) {
         justify-content: flex-start;
@@ -103,8 +99,6 @@
     }
     
 }
-
-// end add to cart button
 
 .woocommerce-tabs.wc-tabs-wrapper {
     order: 1;
