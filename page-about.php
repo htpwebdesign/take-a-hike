@@ -79,8 +79,7 @@ get_header();
     						?>
 						
     						<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-    						target="<?php echo esc_attr( $link_target ); ?>
-    						"><?php echo esc_html( $link_title ); 
+    						target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); 
     							if( get_row_index() <= 4 ) :
 									?>
 									<div class="container"> 

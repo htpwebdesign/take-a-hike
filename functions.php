@@ -101,6 +101,13 @@ function take_a_hike_setup() {
 			'flex-height' => true,
 		)
 	);
+	
+	/**
+ 	* Editor Styles
+ 	*/
+	add_theme_support( 'editor-styles' );
+	add_editor_style('editor-style.css');
+
 }
 add_action( 'after_setup_theme', 'take_a_hike_setup' );
 
@@ -269,11 +276,7 @@ function my_login_form() { ?>
 add_action( 'login_enqueue_scripts', 'my_login_form' );
 
 
-/**
- * Editor Styles
- */
-add_theme_support( 'editor-styles' );
-add_editor_style('editor-style.css');
+
 
 /**
  * Remove dashboard widgets

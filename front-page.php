@@ -49,8 +49,7 @@ get_header();
     							?>
 								<div class="activity">
     								<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-    								target="<?php echo esc_attr( $link_target ); ?>
-    								"><?php echo esc_html( $link_title ); ?>
+    								target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?>
 										<div class="main-container">    							
 											<?php $image = get_sub_field( 'image' );
     										$size = 'large'; // (thumbnail, medium, large, full or custom size)
@@ -90,8 +89,7 @@ get_header();
 								<div class="activity">
 							
     								<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-    								target="<?php echo esc_attr( $link_target ); ?>
-    								"><?php echo esc_html( $link_title ); ?>
+    								target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?>
     							
 										<div class="main-container"> 
 											<?php $image = get_sub_field( 'image' );
@@ -114,55 +112,23 @@ get_header();
 			
 					
 				<section class="end-section">
-					<?php
-					if ( get_field( 'workshop_subheading' ) ) :
-					?>							
-						<h2 class="workshop-header"><?php the_field( 'workshop_subheading' ); ?></h2>
-						<?php
-					endif;
-
-					$args = array(
-						'post_type'			=> 'tribe_events',
-						'posts_per_page'	=> 1,		
-    					'orderby'     		=> 'start-date',
-    					'order'       		=> 'ASC',
-					);					
-
-					$query = new WP_Query($args);
-			
-					if ( $query->have_posts() ) :
-						while ( $query->have_posts() ) :
-						$query->the_post();
-						?>
-    						<a class="activity-link" href="<?php the_permalink(); ?>">
-								<div class="main-container"> 
-									<?php the_post_thumbnail( 'large' ); ?>
-									<h2 class="title"><?php the_title(); ?></h2>
-								</div>
-   							</a>	
-							
-						<?php  
-						endwhile;
-						wp_reset_postdata();
-					endif;
+					<?php	
 				
+					if (have_rows ( 'end_section' ) ) :
+						while ( have_rows( 'end_section' ) ): 
+						the_row(); 
+						$link = get_sub_field( 'link' );
 
-					// if (have_rows ( 'end_section' ) ) :
-					// 	while ( have_rows( 'end_section' ) ): 
-					// 	the_row(); 
-					// 	$link = get_sub_field( 'link' );
-
-					// 		if( $link ) : 
-					// 		$link_url = $link['url'];
-		   			// 		$link_title = $link['title'];
-					// 		$link_target = $link['target'] ? $link['target'] : '_self';
+							if( $link ) : 
+							$link_url = $link['url'];
+		   					$link_title = $link['title'];
+							$link_target = $link['target'] ? $link['target'] : '_self';
 							?>
 		
-								<!-- <h2 class="workshop-header"><?php the_field( 'workshop_subheading' ); ?></h2>
+								<h2 class="workshop-header"><?php the_field( 'workshop_subheading' ); ?></h2>
 		
 								<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
-								target="<?php echo esc_attr( $link_target ); ?>
-								"><?php echo esc_html( $link_title ); ?>
+								target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?>
 									<div class="main-container"> 
 									<?php $image = get_sub_field( 'image' );
 									$size = 'large'; 
@@ -172,13 +138,13 @@ get_header();
 										endif; ?>
 								<h2 class="title"><?php the_sub_field( 'title' ); ?></h2>
 									</div>
-								</a>	 -->
+								</a>	
 		
 								<?php  
-					// 		endif;						
+							endif;						
 		
-					// 	endwhile;
-					// endif;
+						endwhile;
+					endif;
 					?>
 				</section>		
 					

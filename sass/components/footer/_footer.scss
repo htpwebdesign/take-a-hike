@@ -37,6 +37,10 @@
   justify-content: center;
 }
 
+.menu-footer-container {
+  flex-wrap: wrap;
+}
+
 .menu-footer-container,
 .menu-social-container,
 .copyright_policy {
@@ -44,7 +48,9 @@
 }
 
 .footer-navigation li {
-  padding-right: 0.25rem;
+  padding-right: 0.75rem;
+  padding-top: 0.25rem;
+  font-size: 1rem;
 }
 
 .social-navigation li {

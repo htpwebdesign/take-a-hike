@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Teko:wght@400;500;600;700&display=swap");
+
 /* Typography
 --------------------------------------------- */
 body,
@@ -32,4 +34,25 @@ p {
 --------------------------------------------- */
 body {
   background: #fff;
+}
+
+/* Links
+--------------------------------------------- */
+a {
+  color: #4169e1;
+}
+a:visited {
+  color: #800080;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #8d2c19;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
 }
