@@ -1,3 +1,10 @@
+.woocommerce-breadcrumb {
+    a {
+        color: $accent-color;
+        text-decoration: none;
+    }
+}
+
 .woocommerce-page {
 
     .site-main {
@@ -13,6 +20,9 @@
             padding-left: 0;
             font-size: 120%;
             width: 100%;
+            text-decoration: none;
+            border-radius: 7px;
+            
 
             li {
                 margin: .65rem;
@@ -22,6 +32,7 @@
                     padding: .5rem;
                     background-color: #e6e6e6;
                     color: $brand-color;
+                    
 
                 }
 
@@ -38,27 +49,41 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 4rem 1.5rem;
         text-align: center;
+
     }
 
     ul {
         li.product.type-product {
             margin: 0 auto;
             width: 150px;
+
+            a {
+                text-decoration: none;
+                h2 {color: $brand-color;}
+                .dashicons {color: $brand-color;}
+    
+                :hover {
+                    color: $accent-color;
+                }
+            }
         }
 
         .star-rating {
                 margin: 0 auto;
         }
 
-        a {
-            text-decoration: none;
-            color: $brand-color;
 
-            :hover {
-                color: $accent-color;
-            }
-        }
     }
+
 }
+
+.woocommerce-loop-product__title, .bundled_product_title.product_title {
+    font-weight: 400;
+}
+
+.products.bundled_products.columns-3 {
+    margin: 2rem;
+}
+ 
