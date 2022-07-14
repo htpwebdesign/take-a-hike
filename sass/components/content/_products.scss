@@ -1,3 +1,10 @@
+.woocommerce-breadcrumb {
+    a {
+        color: $accent-color;
+        text-decoration: none;
+    }
+}
+
 .woocommerce-page {
 
     .site-main {
@@ -41,7 +48,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 4rem 1.5rem;
         text-align: center;
 
     }
