@@ -110,9 +110,7 @@ get_header();
 						endif;
 						?>
 					</div>
-				</section>
-
-				
+				</section>		
 			
 					
 				<section class="end-section">
@@ -123,12 +121,12 @@ get_header();
 						<?php
 					endif;
 
-					$args = array (
-						'post_type' => 'tribe_events', 
-						'posts_per_page' => 1, 						
-						'orderby' => 'date', 
-						'order' => 'ASC'
-					);			
+					$args = array(
+						'post_type'			=> 'tribe_events',
+						'posts_per_page'	=> 1,		
+    					'orderby'     		=> 'start-date',
+    					'order'       		=> 'ASC',
+					);					
 
 					$query = new WP_Query($args);
 			
@@ -147,6 +145,40 @@ get_header();
 						endwhile;
 						wp_reset_postdata();
 					endif;
+				
+
+					// if (have_rows ( 'end_section' ) ) :
+					// 	while ( have_rows( 'end_section' ) ): 
+					// 	the_row(); 
+					// 	$link = get_sub_field( 'link' );
+
+					// 		if( $link ) : 
+					// 		$link_url = $link['url'];
+		   			// 		$link_title = $link['title'];
+					// 		$link_target = $link['target'] ? $link['target'] : '_self';
+							?>
+		
+								<!-- <h2 class="workshop-header"><?php the_field( 'workshop_subheading' ); ?></h2>
+		
+								<a class="activity-link" href="<?php echo esc_url( $link_url ); ?>"
+								target="<?php echo esc_attr( $link_target ); ?>
+								"><?php echo esc_html( $link_title ); ?>
+									<div class="main-container"> 
+									<?php $image = get_sub_field( 'image' );
+									$size = 'large'; 
+			
+										if( $image ) :
+											echo wp_get_attachment_image( $image, $size );					
+										endif; ?>
+								<h2 class="title"><?php the_sub_field( 'title' ); ?></h2>
+									</div>
+								</a>	 -->
+		
+								<?php  
+					// 		endif;						
+		
+					// 	endwhile;
+					// endif;
 					?>
 				</section>		
 					
