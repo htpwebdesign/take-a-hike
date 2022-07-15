@@ -16,3 +16,15 @@
   clear: both;
   margin: 0 0 1.5em;
 }
+
+.site-main {
+      padding: 2rem;
+}
+
+
+@media screen and (min-width: $breakpoint1280) {
+      .site-main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+}

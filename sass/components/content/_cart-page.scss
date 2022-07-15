@@ -101,6 +101,16 @@
     }
 }
 
+#post-15 > div > div > div.woocommerce-notices-wrapper > div {
+    background-color: #fff;
+    color: $brand-color;
+    text-align: center;
+
+    a {
+        color: $accent-color;
+    }
+}
+
 @media screen and (min-width: 43.75em) {
     .woocommerce-shipping-totals {
         position: relative;

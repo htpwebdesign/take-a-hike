@@ -313,6 +313,11 @@ function my_custom_dashboard_widgets() {
 	echo '<p><a href="https://www.youtube.com/watch?v=FAqqtB4hPFU" target="_blank">Modify Instagram feed on the home page</a></p>';
 	echo '<p><a href="https://www.youtube.com/watch?v=VkxbcKxRkfg" target="_blank">Edit content on pages</a></p>';
 	echo '<p><a href="https://www.youtube.com/watch?v=VaZwK9d3b2A" target="_blank">Add and edit events</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=3IDb6FUoq5g" target="_blank">Add and edit a simple product</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=qQSqQZsTBUw" target="_blank">Add and edit variable products</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=BNOb3T8uCCc" target="_blank">Add and edit product bundle</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=6lw5jYkaIgA" target="_blank">Add and edit categories, tags, attributes</a></p>';
+	echo '<p><a href="https://www.youtube.com/watch?v=Lrhf8z1Ctyk" target="_blank">Add and edit pages</a></p>';
 }
 add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
 
