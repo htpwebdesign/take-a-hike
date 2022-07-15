@@ -6,7 +6,6 @@
 }
 
 .woocommerce-page {
-
     .site-main {
         width: 90%;
         max-width: 1200px;
@@ -22,24 +21,19 @@
             width: 100%;
             text-decoration: none;
             border-radius: 7px;
-            
-
+     
             li {
                 margin: .65rem;
-
 
                 a {
                     padding: .5rem;
                     background-color: #e6e6e6;
                     color: $brand-color;
-                    
-
                 }
 
                 .current {
                     padding: .5rem;
                     color: $accent-color;
-
                 }
             }
         }
@@ -51,7 +45,6 @@
         justify-content: center;
         gap: 4rem 1.5rem;
         text-align: center;
-
     }
 
     ul {
@@ -73,10 +66,7 @@
         .star-rating {
                 margin: 0 auto;
         }
-
-
     }
-
 }
 
 .woocommerce-loop-product__title, .bundled_product_title.product_title {
@@ -87,10 +77,11 @@
     margin: 2rem;
 }
  
-
-
-
 .woocommerce-products-compare-content.woocommerce {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1200px;
+
     table {
         thead tr {
             th h3{
@@ -100,7 +91,6 @@
                 line-height: 1.5;
             }
             .product {
-
                 vertical-align: bottom;
                 a h3 {
                     color: $brand-color;
@@ -111,9 +101,9 @@
         }
 
     tbody {
-
         th {
             text-align: left;
+            vertical-align: middle;
         }
 
         tr {
@@ -122,6 +112,10 @@
     }
 
     tfoot {
+        tr td{
+            vertical-align: bottom;
+        }
+        
         a h3 {
             color: $brand-color;
             font-weight: 400;
