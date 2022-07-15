@@ -51,8 +51,10 @@
 }
 
 @media screen and (min-width: 80em) {
-  .site-main {
-    max-width: 100%;
-    margin: 0;
+  .error404 {
+    .site-main {
+      max-width: 100%;
+      margin: 0;
+    }
   }
 }
