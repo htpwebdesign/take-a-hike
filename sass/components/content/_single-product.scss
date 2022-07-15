@@ -139,8 +139,6 @@
         color: $accent-color;
     }
 }
-
-
 // mobile tabs
 
 // desktop tabs
@@ -156,7 +154,6 @@
         padding-left: 1rem;
     }
 }
-
 
 .tabs.wc-tabs.resp-tabs-list {
 
@@ -204,7 +201,6 @@ ul.products li.product img {
             font-size: 70%;
             font-weight: 600;
         }
-
 }
 
 section.related.products {
@@ -251,7 +247,6 @@ section.related.products {
     border-radius: 3px;
     display: block;
     margin: 0 auto;
-
 }
 
 .summary-add-to-cart-form.summary-add-to-cart-form-bundle {
@@ -263,8 +258,6 @@ section.related.products {
 }
 
 //for bundles 
-
-
 .products.bundled_products.columns-3 {
     display: flex;
     flex-wrap: wrap;
@@ -287,6 +280,7 @@ section.related.products {
         width: 150px;
     }
 }
+
 .products.bundled_products.columns-3 {
     display: flex;
 }
@@ -301,7 +295,6 @@ section.related.products {
     text-decoration: none;
 }
 
-
 .woocommerce-Reviews {
     .commentlist {
         margin-left: 0;
@@ -310,4 +303,11 @@ section.related.products {
             list-style: none;
         }
     }
+}
+
+#review_form_wrapper {
+    margin-top: 3rem;
+}
+#reply-title {
+    font-weight: 600;
 }
