@@ -7,15 +7,27 @@
 
 .contact-map {
     display: none;
+    max-width: 100%;
+    padding: 0;
 }
 
 @media screen and (min-width: $breakpointtablet) {
     .contact-map {
         display: block;
+        max-width: 100%;
+        padding: 0;
+
     }
 }
 
 .page-id-268 {
+
+    .site-main {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
     h1,
     h2 {
         text-align: center;
@@ -97,7 +109,7 @@
     .form-address-social {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        max-width: 1100px;
+        max-width: 68.75rem;
         margin: 4rem auto 2rem;
     }
 

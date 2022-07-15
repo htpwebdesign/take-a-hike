@@ -25,7 +25,7 @@ input[type="submit"] {
 .button.product_type_variable.add_to_cart_button,
 .single_add_to_cart_button {
     width: 150px;
-    margin: 0 auto;
+    margin: 1rem auto;
     border: 1px solid;
     border-color: #ccc #ccc #bbb;
     border-radius: 7px;
@@ -33,6 +33,7 @@ input[type="submit"] {
     color: white;
     line-height: 1;
     padding: .5em 1em;
+	white-space: nowrap;
 }
 
 .button.product_type_simple.add_to_cart_button:hover, 

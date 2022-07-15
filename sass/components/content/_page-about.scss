@@ -2,6 +2,8 @@
   justify-content: center;
   text-align: center;
   margin: 0 5%;
+  max-width: 100%;
+  padding: 0;
 }
 
 .main-about h1 {
@@ -110,7 +112,7 @@
   .activities-grid {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .main-about h1 {
