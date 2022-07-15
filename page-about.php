@@ -53,7 +53,6 @@ get_header();
 					<?php 
 					endif;
 				endif;
-
 				?>
 			</section>
 
@@ -65,7 +64,7 @@ get_header();
 					<?php
 				endif;
 				?>
-				<section class="activities-grid">
+				<div class="activities-grid">
 				<?php
 					if ( have_rows ( 'hero_section', 45 ) ) :
 						while( have_rows( 'hero_section', 45 ) ): 
@@ -97,21 +96,15 @@ get_header();
 								?>
    							</a>	
 							<?php  
-							endif;						
-							
-					endwhile;
-				endif;
+							endif;					
+						endwhile;
+					endif;
 				?>
-				</section>
+				</div>
 			</section>
-
-
 			<?php
-
-
 		endwhile; // End of the loop.
 		?>
-
 	</main><!-- #main -->
 
 <?php
