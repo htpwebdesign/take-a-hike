@@ -155,11 +155,6 @@
         margin-left: 0;
         padding-left: 1rem;
     }
-    
-    li {
-        list-style: square;
-        padding: .25rem;     
-    }
 }
 
 
@@ -284,7 +279,6 @@ section.related.products {
     }
 }
 
-
 .summary-add-to-cart-form.summary-add-to-cart-form-bundle {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -305,4 +299,15 @@ section.related.products {
 .reset_variations {
     color: $brand-color;
     text-decoration: none;
+}
+
+
+.woocommerce-Reviews {
+    .commentlist {
+        margin-left: 0;
+        padding-left: 0;
+        li {
+            list-style: none;
+        }
+    }
 }
