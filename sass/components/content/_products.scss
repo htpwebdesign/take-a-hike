@@ -87,3 +87,46 @@
     margin: 2rem;
 }
  
+
+
+
+.woocommerce-products-compare-content.woocommerce {
+    table {
+        thead tr {
+            th h3{
+                color: #404040;
+                font-family: "Montserrat", sans-serif;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            .product {
+
+                vertical-align: bottom;
+                a h3 {
+                    color: $brand-color;
+                    font-weight: 400;
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+    tbody {
+
+        th {
+            text-align: left;
+        }
+
+        tr {
+            text-align: center;
+        }
+    }
+
+    tfoot {
+        a h3 {
+            color: $brand-color;
+            font-weight: 400;
+            font-size: 1.5em;
+        }
+    }
+}
+}

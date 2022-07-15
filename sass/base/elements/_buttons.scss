@@ -33,6 +33,7 @@ input[type="submit"] {
     color: white;
     line-height: 1;
     padding: .5em 1em;
+	white-space: nowrap;
 }
 
 .button.product_type_simple.add_to_cart_button:hover, 
