@@ -65,8 +65,7 @@ get_header();
    								 	</a>
 								</div>
 								<?php  
-							endif;						
-							
+								endif;						
 							endwhile;
 						endif;
 						?>
